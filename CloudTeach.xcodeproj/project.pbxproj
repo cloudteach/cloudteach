@@ -1,0 +1,762 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A9D509C1E88F32400614B80 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D509B1E88F32400614B80 /* main.m */; };
+		2A9D509F1E88F32400614B80 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D509E1E88F32400614B80 /* AppDelegate.m */; };
+		2A9D50A21E88F32400614B80 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D50A11E88F32400614B80 /* ViewController.m */; };
+		2A9D50A51E88F32400614B80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A9D50A31E88F32400614B80 /* Main.storyboard */; };
+		2A9D50A71E88F32400614B80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A9D50A61E88F32400614B80 /* Assets.xcassets */; };
+		2A9D50AA1E88F32400614B80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A9D50A81E88F32400614B80 /* LaunchScreen.storyboard */; };
+		2A9D50C01E88F52500614B80 /* CTTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D50BF1E88F52500614B80 /* CTTabBarViewController.m */; };
+		2A9D50C91E88F61900614B80 /* SuperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D50C81E88F61900614B80 /* SuperViewController.m */; };
+		2A9D50CC1E88F62B00614B80 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D50CB1E88F62B00614B80 /* MessageViewController.m */; };
+		2A9D50D51E88F68300614B80 /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D50D41E88F68300614B80 /* ContactViewController.m */; };
+		2A9D50D81E88F6A200614B80 /* ApplicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D50D71E88F6A200614B80 /* ApplicationViewController.m */; };
+		2A9D50DB1E88F6B100614B80 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D50DA1E88F6B100614B80 /* MyViewController.m */; };
+		2A9D50DF1E88F90300614B80 /* UIColor+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D50DE1E88F90300614B80 /* UIColor+Theme.m */; };
+		2A9D50E51E89077D00614B80 /* SuperTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D50E41E89077D00614B80 /* SuperTableViewCell.m */; };
+		2A9D50E81E8907DE00614B80 /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D50E71E8907DE00614B80 /* MessageTableViewCell.m */; };
+		2A9D50EB1E8919C000614B80 /* UILabel+VerticalAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D50EA1E8919C000614B80 /* UILabel+VerticalAlignment.m */; };
+		2A9D50EE1E89FA0000614B80 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D50ED1E89FA0000614B80 /* LoginViewController.m */; };
+		2A9D50F11E89FC9A00614B80 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D50F01E89FC9A00614B80 /* UIView+Additions.m */; };
+		2A9D50F41E89FF2600614B80 /* SuperManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D50F31E89FF2600614B80 /* SuperManager.m */; };
+		2ACF301A1E8A032500CA5DE7 /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF30191E8A032500CA5DE7 /* LoginManager.m */; };
+		2ACF30211E8A0C4200CA5DE7 /* MBProgressHUD+NJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF301D1E8A0C4200CA5DE7 /* MBProgressHUD+NJ.m */; };
+		2ACF30221E8A0C4200CA5DE7 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2ACF301E1E8A0C4200CA5DE7 /* MBProgressHUD.bundle */; };
+		2ACF30231E8A0C4200CA5DE7 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF30201E8A0C4200CA5DE7 /* MBProgressHUD.m */; };
+		2ACF30281E8A344D00CA5DE7 /* SuperModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF30271E8A344D00CA5DE7 /* SuperModel.m */; };
+		2ACF302B1E8A348700CA5DE7 /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF302A1E8A348700CA5DE7 /* LoginModel.m */; };
+		2ACF302D1E8A34D300CA5DE7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ACF302C1E8A34D300CA5DE7 /* SystemConfiguration.framework */; };
+		2ACF30801E8A62C700CA5DE7 /* SuperSqlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF307F1E8A62C700CA5DE7 /* SuperSqlManager.m */; };
+		2ACF30831E8A676100CA5DE7 /* LoginSqlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF30821E8A676100CA5DE7 /* LoginSqlManager.m */; };
+		2ACF30861E8AA25800CA5DE7 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF30851E8AA25800CA5DE7 /* ChatViewController.m */; };
+		5D83C12B71569A8A3E93E0AF /* libPods-CloudTeach.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D969A32C4F0D7353CF474F5D /* libPods-CloudTeach.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2A9D50971E88F32400614B80 /* CloudTeach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudTeach.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A9D509B1E88F32400614B80 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2A9D509D1E88F32400614B80 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2A9D509E1E88F32400614B80 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2A9D50A01E88F32400614B80 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2A9D50A11E88F32400614B80 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2A9D50A41E88F32400614B80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2A9D50A61E88F32400614B80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2A9D50A91E88F32400614B80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2A9D50AB1E88F32400614B80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A9D50BE1E88F52500614B80 /* CTTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTTabBarViewController.h; sourceTree = "<group>"; };
+		2A9D50BF1E88F52500614B80 /* CTTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTTabBarViewController.m; sourceTree = "<group>"; };
+		2A9D50C71E88F61900614B80 /* SuperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperViewController.h; sourceTree = "<group>"; };
+		2A9D50C81E88F61900614B80 /* SuperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperViewController.m; sourceTree = "<group>"; };
+		2A9D50CA1E88F62B00614B80 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		2A9D50CB1E88F62B00614B80 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		2A9D50D31E88F68300614B80 /* ContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactViewController.h; sourceTree = "<group>"; };
+		2A9D50D41E88F68300614B80 /* ContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactViewController.m; sourceTree = "<group>"; };
+		2A9D50D61E88F6A200614B80 /* ApplicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationViewController.h; sourceTree = "<group>"; };
+		2A9D50D71E88F6A200614B80 /* ApplicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationViewController.m; sourceTree = "<group>"; };
+		2A9D50D91E88F6B100614B80 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		2A9D50DA1E88F6B100614B80 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		2A9D50DD1E88F90300614B80 /* UIColor+Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Theme.h"; sourceTree = "<group>"; };
+		2A9D50DE1E88F90300614B80 /* UIColor+Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Theme.m"; sourceTree = "<group>"; };
+		2A9D50E01E88F92700614B80 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		2A9D50E31E89077D00614B80 /* SuperTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperTableViewCell.h; sourceTree = "<group>"; };
+		2A9D50E41E89077D00614B80 /* SuperTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperTableViewCell.m; sourceTree = "<group>"; };
+		2A9D50E61E8907DE00614B80 /* MessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTableViewCell.h; sourceTree = "<group>"; };
+		2A9D50E71E8907DE00614B80 /* MessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewCell.m; sourceTree = "<group>"; };
+		2A9D50E91E8919C000614B80 /* UILabel+VerticalAlignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+VerticalAlignment.h"; sourceTree = "<group>"; };
+		2A9D50EA1E8919C000614B80 /* UILabel+VerticalAlignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+VerticalAlignment.m"; sourceTree = "<group>"; };
+		2A9D50EC1E89FA0000614B80 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		2A9D50ED1E89FA0000614B80 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		2A9D50EF1E89FC9A00614B80 /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
+		2A9D50F01E89FC9A00614B80 /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
+		2A9D50F21E89FF2600614B80 /* SuperManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperManager.h; sourceTree = "<group>"; };
+		2A9D50F31E89FF2600614B80 /* SuperManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperManager.m; sourceTree = "<group>"; };
+		2ACF30181E8A032500CA5DE7 /* LoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginManager.h; sourceTree = "<group>"; };
+		2ACF30191E8A032500CA5DE7 /* LoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginManager.m; sourceTree = "<group>"; };
+		2ACF301C1E8A0C4200CA5DE7 /* MBProgressHUD+NJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+NJ.h"; sourceTree = "<group>"; };
+		2ACF301D1E8A0C4200CA5DE7 /* MBProgressHUD+NJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+NJ.m"; sourceTree = "<group>"; };
+		2ACF301E1E8A0C4200CA5DE7 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		2ACF301F1E8A0C4200CA5DE7 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		2ACF30201E8A0C4200CA5DE7 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		2ACF30261E8A344D00CA5DE7 /* SuperModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperModel.h; sourceTree = "<group>"; };
+		2ACF30271E8A344D00CA5DE7 /* SuperModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperModel.m; sourceTree = "<group>"; };
+		2ACF30291E8A348700CA5DE7 /* LoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginModel.h; sourceTree = "<group>"; };
+		2ACF302A1E8A348700CA5DE7 /* LoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginModel.m; sourceTree = "<group>"; };
+		2ACF302C1E8A34D300CA5DE7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		2ACF307E1E8A62C700CA5DE7 /* SuperSqlManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperSqlManager.h; sourceTree = "<group>"; };
+		2ACF307F1E8A62C700CA5DE7 /* SuperSqlManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperSqlManager.m; sourceTree = "<group>"; };
+		2ACF30811E8A676100CA5DE7 /* LoginSqlManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginSqlManager.h; sourceTree = "<group>"; };
+		2ACF30821E8A676100CA5DE7 /* LoginSqlManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginSqlManager.m; sourceTree = "<group>"; };
+		2ACF30841E8AA25800CA5DE7 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		2ACF30851E8AA25800CA5DE7 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		6F6E982B1B34BCD770E578CD /* Pods-CloudTeach.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudTeach.release.xcconfig"; path = "Pods/Target Support Files/Pods-CloudTeach/Pods-CloudTeach.release.xcconfig"; sourceTree = "<group>"; };
+		D4D622C82A683ADF4DCAC808 /* Pods-CloudTeach.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudTeach.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CloudTeach/Pods-CloudTeach.debug.xcconfig"; sourceTree = "<group>"; };
+		D969A32C4F0D7353CF474F5D /* libPods-CloudTeach.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CloudTeach.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A9D50941E88F32400614B80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ACF302D1E8A34D300CA5DE7 /* SystemConfiguration.framework in Frameworks */,
+				5D83C12B71569A8A3E93E0AF /* libPods-CloudTeach.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A9D508E1E88F32400614B80 = {
+			isa = PBXGroup;
+			children = (
+				2A9D50991E88F32400614B80 /* CloudTeach */,
+				2A9D50981E88F32400614B80 /* Products */,
+				2C146368069FC6BC50515A85 /* Pods */,
+				E3C22182AD8EA850E2DAC8BA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2A9D50981E88F32400614B80 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2A9D50971E88F32400614B80 /* CloudTeach.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A9D50991E88F32400614B80 /* CloudTeach */ = {
+			isa = PBXGroup;
+			children = (
+				2A9D50DC1E88F8C900614B80 /* SupportItem */,
+				2A9D50C41E88F60400614B80 /* SuperItem */,
+				2A9D50BB1E88F4C300614B80 /* TabItem */,
+				2A9D50B81E88F41E00614B80 /* LoginItem */,
+				2A9D50B21E88F3A800614B80 /* FirstItem */,
+				2A9D50B31E88F3A800614B80 /* FourthItem */,
+				2A9D50B41E88F3A800614B80 /* SecondItem */,
+				2A9D50B51E88F3A800614B80 /* ThirdItem */,
+				2A9D509D1E88F32400614B80 /* AppDelegate.h */,
+				2A9D509E1E88F32400614B80 /* AppDelegate.m */,
+				2A9D50A01E88F32400614B80 /* ViewController.h */,
+				2A9D50A11E88F32400614B80 /* ViewController.m */,
+				2A9D50E01E88F92700614B80 /* PrefixHeader.pch */,
+				2A9D50A31E88F32400614B80 /* Main.storyboard */,
+				2A9D50A61E88F32400614B80 /* Assets.xcassets */,
+				2A9D50A81E88F32400614B80 /* LaunchScreen.storyboard */,
+				2A9D50AB1E88F32400614B80 /* Info.plist */,
+				2A9D509A1E88F32400614B80 /* Supporting Files */,
+			);
+			path = CloudTeach;
+			sourceTree = "<group>";
+		};
+		2A9D509A1E88F32400614B80 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2A9D509B1E88F32400614B80 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2A9D50B21E88F3A800614B80 /* FirstItem */ = {
+			isa = PBXGroup;
+			children = (
+				2A9D50B61E88F3E800614B80 /* Controller */,
+				2A9D50B71E88F3E800614B80 /* Manager */,
+			);
+			path = FirstItem;
+			sourceTree = "<group>";
+		};
+		2A9D50B31E88F3A800614B80 /* FourthItem */ = {
+			isa = PBXGroup;
+			children = (
+				2A9D50CD1E88F65E00614B80 /* Controller */,
+				2A9D50CE1E88F65E00614B80 /* Manager */,
+			);
+			path = FourthItem;
+			sourceTree = "<group>";
+		};
+		2A9D50B41E88F3A800614B80 /* SecondItem */ = {
+			isa = PBXGroup;
+			children = (
+				2A9D50CF1E88F66600614B80 /* Controller */,
+				2A9D50D01E88F66600614B80 /* Manager */,
+			);
+			path = SecondItem;
+			sourceTree = "<group>";
+		};
+		2A9D50B51E88F3A800614B80 /* ThirdItem */ = {
+			isa = PBXGroup;
+			children = (
+				2A9D50D11E88F67000614B80 /* Controller */,
+				2A9D50D21E88F67000614B80 /* Manager */,
+			);
+			path = ThirdItem;
+			sourceTree = "<group>";
+		};
+		2A9D50B61E88F3E800614B80 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2A9D50E11E89073000614B80 /* Cell */,
+				2A9D50CA1E88F62B00614B80 /* MessageViewController.h */,
+				2A9D50CB1E88F62B00614B80 /* MessageViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2A9D50B71E88F3E800614B80 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		2A9D50B81E88F41E00614B80 /* LoginItem */ = {
+			isa = PBXGroup;
+			children = (
+				2ACF30241E8A33F500CA5DE7 /* Model */,
+				2A9D50B91E88F41E00614B80 /* Controller */,
+				2A9D50BA1E88F41E00614B80 /* Manager */,
+			);
+			path = LoginItem;
+			sourceTree = "<group>";
+		};
+		2A9D50B91E88F41E00614B80 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2A9D50EC1E89FA0000614B80 /* LoginViewController.h */,
+				2A9D50ED1E89FA0000614B80 /* LoginViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2A9D50BA1E88F41E00614B80 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				2ACF30181E8A032500CA5DE7 /* LoginManager.h */,
+				2ACF30191E8A032500CA5DE7 /* LoginManager.m */,
+				2ACF30811E8A676100CA5DE7 /* LoginSqlManager.h */,
+				2ACF30821E8A676100CA5DE7 /* LoginSqlManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		2A9D50BB1E88F4C300614B80 /* TabItem */ = {
+			isa = PBXGroup;
+			children = (
+				2A9D50BC1E88F4C300614B80 /* Controller */,
+				2A9D50BD1E88F4C300614B80 /* Manager */,
+			);
+			path = TabItem;
+			sourceTree = "<group>";
+		};
+		2A9D50BC1E88F4C300614B80 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2A9D50BE1E88F52500614B80 /* CTTabBarViewController.h */,
+				2A9D50BF1E88F52500614B80 /* CTTabBarViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2A9D50BD1E88F4C300614B80 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		2A9D50C41E88F60400614B80 /* SuperItem */ = {
+			isa = PBXGroup;
+			children = (
+				2ACF30251E8A342300CA5DE7 /* Model */,
+				2A9D50C51E88F60400614B80 /* Controller */,
+				2A9D50C61E88F60400614B80 /* Manager */,
+			);
+			path = SuperItem;
+			sourceTree = "<group>";
+		};
+		2A9D50C51E88F60400614B80 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2A9D50E21E89076200614B80 /* Cell */,
+				2A9D50C71E88F61900614B80 /* SuperViewController.h */,
+				2A9D50C81E88F61900614B80 /* SuperViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2A9D50C61E88F60400614B80 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				2A9D50F21E89FF2600614B80 /* SuperManager.h */,
+				2A9D50F31E89FF2600614B80 /* SuperManager.m */,
+				2ACF307E1E8A62C700CA5DE7 /* SuperSqlManager.h */,
+				2ACF307F1E8A62C700CA5DE7 /* SuperSqlManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		2A9D50CD1E88F65E00614B80 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2A9D50D91E88F6B100614B80 /* MyViewController.h */,
+				2A9D50DA1E88F6B100614B80 /* MyViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2A9D50CE1E88F65E00614B80 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		2A9D50CF1E88F66600614B80 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2A9D50D31E88F68300614B80 /* ContactViewController.h */,
+				2A9D50D41E88F68300614B80 /* ContactViewController.m */,
+				2ACF30841E8AA25800CA5DE7 /* ChatViewController.h */,
+				2ACF30851E8AA25800CA5DE7 /* ChatViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2A9D50D01E88F66600614B80 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		2A9D50D11E88F67000614B80 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2A9D50D61E88F6A200614B80 /* ApplicationViewController.h */,
+				2A9D50D71E88F6A200614B80 /* ApplicationViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2A9D50D21E88F67000614B80 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		2A9D50DC1E88F8C900614B80 /* SupportItem */ = {
+			isa = PBXGroup;
+			children = (
+				2ACF301B1E8A0C4200CA5DE7 /* MBProgressHUD */,
+				2A9D50EF1E89FC9A00614B80 /* UIView+Additions.h */,
+				2A9D50F01E89FC9A00614B80 /* UIView+Additions.m */,
+				2A9D50DD1E88F90300614B80 /* UIColor+Theme.h */,
+				2A9D50DE1E88F90300614B80 /* UIColor+Theme.m */,
+				2A9D50E91E8919C000614B80 /* UILabel+VerticalAlignment.h */,
+				2A9D50EA1E8919C000614B80 /* UILabel+VerticalAlignment.m */,
+			);
+			path = SupportItem;
+			sourceTree = "<group>";
+		};
+		2A9D50E11E89073000614B80 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2A9D50E61E8907DE00614B80 /* MessageTableViewCell.h */,
+				2A9D50E71E8907DE00614B80 /* MessageTableViewCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		2A9D50E21E89076200614B80 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2A9D50E31E89077D00614B80 /* SuperTableViewCell.h */,
+				2A9D50E41E89077D00614B80 /* SuperTableViewCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		2ACF301B1E8A0C4200CA5DE7 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				2ACF301C1E8A0C4200CA5DE7 /* MBProgressHUD+NJ.h */,
+				2ACF301D1E8A0C4200CA5DE7 /* MBProgressHUD+NJ.m */,
+				2ACF301E1E8A0C4200CA5DE7 /* MBProgressHUD.bundle */,
+				2ACF301F1E8A0C4200CA5DE7 /* MBProgressHUD.h */,
+				2ACF30201E8A0C4200CA5DE7 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		2ACF30241E8A33F500CA5DE7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2ACF30291E8A348700CA5DE7 /* LoginModel.h */,
+				2ACF302A1E8A348700CA5DE7 /* LoginModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2ACF30251E8A342300CA5DE7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2ACF30261E8A344D00CA5DE7 /* SuperModel.h */,
+				2ACF30271E8A344D00CA5DE7 /* SuperModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2C146368069FC6BC50515A85 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D4D622C82A683ADF4DCAC808 /* Pods-CloudTeach.debug.xcconfig */,
+				6F6E982B1B34BCD770E578CD /* Pods-CloudTeach.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E3C22182AD8EA850E2DAC8BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2ACF302C1E8A34D300CA5DE7 /* SystemConfiguration.framework */,
+				D969A32C4F0D7353CF474F5D /* libPods-CloudTeach.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2A9D50961E88F32400614B80 /* CloudTeach */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A9D50AE1E88F32400614B80 /* Build configuration list for PBXNativeTarget "CloudTeach" */;
+			buildPhases = (
+				9E6CA44C8D75336E2AFAAECD /* [CP] Check Pods Manifest.lock */,
+				2A9D50931E88F32400614B80 /* Sources */,
+				2A9D50941E88F32400614B80 /* Frameworks */,
+				2A9D50951E88F32400614B80 /* Resources */,
+				893A2996E8DFBBB83E01F5E9 /* [CP] Embed Pods Frameworks */,
+				5EA166894B684DA3B1711419 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CloudTeach;
+			productName = CloudTeach;
+			productReference = 2A9D50971E88F32400614B80 /* CloudTeach.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A9D508F1E88F32400614B80 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = tiny;
+				TargetAttributes = {
+					2A9D50961E88F32400614B80 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 2A9D50921E88F32400614B80 /* Build configuration list for PBXProject "CloudTeach" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2A9D508E1E88F32400614B80;
+			productRefGroup = 2A9D50981E88F32400614B80 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2A9D50961E88F32400614B80 /* CloudTeach */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2A9D50951E88F32400614B80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A9D50AA1E88F32400614B80 /* LaunchScreen.storyboard in Resources */,
+				2ACF30221E8A0C4200CA5DE7 /* MBProgressHUD.bundle in Resources */,
+				2A9D50A71E88F32400614B80 /* Assets.xcassets in Resources */,
+				2A9D50A51E88F32400614B80 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5EA166894B684DA3B1711419 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CloudTeach/Pods-CloudTeach-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		893A2996E8DFBBB83E01F5E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CloudTeach/Pods-CloudTeach-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E6CA44C8D75336E2AFAAECD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2A9D50931E88F32400614B80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A9D50D51E88F68300614B80 /* ContactViewController.m in Sources */,
+				2ACF30831E8A676100CA5DE7 /* LoginSqlManager.m in Sources */,
+				2A9D50DF1E88F90300614B80 /* UIColor+Theme.m in Sources */,
+				2A9D50D81E88F6A200614B80 /* ApplicationViewController.m in Sources */,
+				2A9D50F41E89FF2600614B80 /* SuperManager.m in Sources */,
+				2A9D50F11E89FC9A00614B80 /* UIView+Additions.m in Sources */,
+				2A9D50CC1E88F62B00614B80 /* MessageViewController.m in Sources */,
+				2A9D50EE1E89FA0000614B80 /* LoginViewController.m in Sources */,
+				2ACF30231E8A0C4200CA5DE7 /* MBProgressHUD.m in Sources */,
+				2ACF30211E8A0C4200CA5DE7 /* MBProgressHUD+NJ.m in Sources */,
+				2ACF301A1E8A032500CA5DE7 /* LoginManager.m in Sources */,
+				2A9D50DB1E88F6B100614B80 /* MyViewController.m in Sources */,
+				2A9D50E81E8907DE00614B80 /* MessageTableViewCell.m in Sources */,
+				2A9D50A21E88F32400614B80 /* ViewController.m in Sources */,
+				2ACF30861E8AA25800CA5DE7 /* ChatViewController.m in Sources */,
+				2A9D50EB1E8919C000614B80 /* UILabel+VerticalAlignment.m in Sources */,
+				2A9D50C01E88F52500614B80 /* CTTabBarViewController.m in Sources */,
+				2ACF30281E8A344D00CA5DE7 /* SuperModel.m in Sources */,
+				2A9D50C91E88F61900614B80 /* SuperViewController.m in Sources */,
+				2A9D509F1E88F32400614B80 /* AppDelegate.m in Sources */,
+				2A9D509C1E88F32400614B80 /* main.m in Sources */,
+				2A9D50E51E89077D00614B80 /* SuperTableViewCell.m in Sources */,
+				2ACF30801E8A62C700CA5DE7 /* SuperSqlManager.m in Sources */,
+				2ACF302B1E8A348700CA5DE7 /* LoginModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2A9D50A31E88F32400614B80 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A9D50A41E88F32400614B80 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2A9D50A81E88F32400614B80 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A9D50A91E88F32400614B80 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2A9D50AC1E88F32400614B80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2A9D50AD1E88F32400614B80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2A9D50AF1E88F32400614B80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4D622C82A683ADF4DCAC808 /* Pods-CloudTeach.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CloudTeach/PrefixHeader.pch;
+				INFOPLIST_FILE = CloudTeach/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CloudTeach/SupportItem/mysql",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tiny.CloudTeach;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2A9D50B01E88F32400614B80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F6E982B1B34BCD770E578CD /* Pods-CloudTeach.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CloudTeach/PrefixHeader.pch;
+				INFOPLIST_FILE = CloudTeach/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CloudTeach/SupportItem/mysql",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tiny.CloudTeach;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2A9D50921E88F32400614B80 /* Build configuration list for PBXProject "CloudTeach" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A9D50AC1E88F32400614B80 /* Debug */,
+				2A9D50AD1E88F32400614B80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A9D50AE1E88F32400614B80 /* Build configuration list for PBXNativeTarget "CloudTeach" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A9D50AF1E88F32400614B80 /* Debug */,
+				2A9D50B01E88F32400614B80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2A9D508F1E88F32400614B80 /* Project object */;
+}

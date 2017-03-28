@@ -1,0 +1,7 @@
+platform :ios, '8.0'
+
+target "CloudTeach" do
+pod 'AFNetworking', '~> 3.1.0'
+pod 'JSONModel', '~> 1.5.1'
+pod 'OHMySQL', '~> 0.3.0'
+end
