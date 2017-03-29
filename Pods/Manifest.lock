@@ -14,22 +14,30 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - HyphenateLite (3.1.5.1)
   - JSONModel (1.5.1)
   - mysql-connector-c (1.0.0)
   - OHMySQL (0.3.0):
     - mysql-connector-c (= 1.0.0)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
+  - HyphenateLite
   - JSONModel (~> 1.5.1)
   - OHMySQL (~> 0.3.0)
+  - SDWebImage (~> 3.8.2)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  HyphenateLite: 7f4bbb7e38917dfbdcc5247fe15c6a0df0f38069
   JSONModel: fd2553dc9e6608a3f35bfc956a14be35395d3852
   mysql-connector-c: 6c1e5a80cf2f459f31578ad1cee95bd36c9363a2
   OHMySQL: b227ffdafaaf1c55e90a31720d502c4387338ffd
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
 
-PODFILE CHECKSUM: bb818e1a6393d44c3d68c4cfcf308ea8b427654b
+PODFILE CHECKSUM: 154baece899d05a9bad717741191f95214f0733d
 
 COCOAPODS: 1.2.0

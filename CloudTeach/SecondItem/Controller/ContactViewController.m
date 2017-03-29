@@ -16,10 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = HEX_RGB(0x999999);
-    
-    self.titleLabel.text = @"Contact";
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {

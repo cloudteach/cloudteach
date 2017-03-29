@@ -15,12 +15,18 @@
 #define BODY_HEIGHT         [UIScreen mainScreen].bounds.size.height-64-49
 
 #define BASE_COLOR          HEX_RGBA(0x32a0d9, 1)
-#define HAD_LOGINED         0
+#define HAD_LOGINED         
+#define LOGIN_STATE         @"login_state"
 
 #import "UIColor+Theme.h"
 #import "UILabel+VerticalAlignment.h"
 #import "UIView+Additions.h"
+#import <UIImageView+WebCache.h>
+#import <HyphenateLite/EMSDK.h>
 
+#import "BaseMessage.h"
+#import "TextMessage.h"
+#import "ImageMessage.h"
 
 //model
 #import "LoginModel.h"

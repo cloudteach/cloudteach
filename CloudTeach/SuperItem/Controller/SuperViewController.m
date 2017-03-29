@@ -7,6 +7,10 @@
 //
 
 #import "SuperViewController.h"
+#import "MessageViewController.h"
+#import "ContactViewController.h"
+#import "ApplicationViewController.h"
+#import "MyViewController.h"
 
 @interface SuperViewController ()
 
@@ -18,7 +22,13 @@
     [super viewDidLoad];
     self.view.backgroundColor = HEX_RGB(0xffffff);
     
-    
+    if([self isKindOfClass:[MessageViewController class]]
+       || [self isKindOfClass:[ContactViewController class]]
+       || [self isKindOfClass:[ApplicationViewController class]]
+       || [self isKindOfClass:[MyViewController class]])
+    {
+        self.titleLabel.text = self.tabBarItem.title;
+    }
     
     // Do any additional setup after loading the view.
 }
@@ -45,6 +55,7 @@
         _leftButton = [UIButton buttonWithType:UIButtonTypeSystem];
         _leftButton.frame = CGRectMake(15, 27, 30, 30);
         [_leftButton addTarget:self action:@selector(leftButtonAction) forControlEvents:UIControlEventTouchUpInside];
+        [_leftButton setBackgroundImage:[UIImage imageNamed:@"btn_back"] forState:UIControlStateNormal];
         _leftButton.hidden = NO;
         [self.viewTitle addSubview:_leftButton];
     }

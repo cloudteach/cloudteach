@@ -9,6 +9,8 @@
 #import "MessageViewController.h"
 #import "MessageTableViewCell.h"
 
+#import "ChatViewController.h"
+
 @interface MessageViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     NSArray *arrHeaderItem;
@@ -20,9 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.titleLabel.text = @"消息";
-    
-    arrHeaderItem = @[@"发作业",@"已发作业",@"待定",@"待定"];
+    arrHeaderItem = @[@"发作业",@"已发作业",@"待定",@"待定",@"发作业",@"已发作业",@"待定",@"待定",@"发作业",@"已发作业",@"待定",@"待定"];
     
     
     [self initTableView];
@@ -30,7 +30,7 @@
 }
 
 - (void)initTableView {
-    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, BODY_HEIGHT) style:UITableViewStyleGrouped];
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT-64-10) style:UITableViewStyleGrouped];
     tableView.delegate = self;
     tableView.dataSource = self;
     [self.view addSubview:tableView];
@@ -56,16 +56,17 @@
     
     if(!cell) {
         cell = [[MessageTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
-        [cell setCellContent:@"" withIndexPath:indexPath];
+        [cell setCellContent:nil withIndexPath:indexPath];
     }
-    
-    
     
     return cell;
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    ChatViewController *chatVC = [ChatViewController new];
+    [self.navigationController pushViewController:chatVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

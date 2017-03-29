@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "LoginManager.h"
 #import "LoginSqlManager.h"
+#import "RegistViewController.h"
 
 @interface LoginViewController ()
 @property (nonatomic,strong)UITextField *tfUserName;
@@ -39,8 +40,22 @@
     btnLogin.layer.borderWidth = 1;
     [btnLogin setTitleColor:HEX_RGB(0xffffff) forState:UIControlStateNormal];
     [btnLogin setTitle:@"登录" forState:UIControlStateNormal];
-    [btnLogin addTarget:self action:@selector(testMysql) forControlEvents:UIControlEventTouchUpInside];
+    [btnLogin addTarget:self action:@selector(loginEM) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btnLogin];
+    
+    
+    UILabel *labRegist = [UILabel new];
+    labRegist.frame = CGRectMake(SCREEN_WIDTH-130, btnLogin.bottom+20, 120, 20);
+    labRegist.text = @"还没有账号，去注册";
+    labRegist.font = [UIFont systemFontOfSize:12];
+    labRegist.userInteractionEnabled = YES;
+    labRegist.textAlignment = NSTextAlignmentRight;
+    [self.view addSubview:labRegist];
+    
+    UIButton *btnRegist = [UIButton buttonWithType:UIButtonTypeSystem];
+    btnRegist.frame = CGRectMake(0, 0, labRegist.width, labRegist.height);
+    [btnRegist addTarget:self action:@selector(regist) forControlEvents:UIControlEventTouchUpInside];
+    [labRegist addSubview:btnRegist];
 }
 
 - (UITextField *)tfUserName {
@@ -48,6 +63,8 @@
         _tfUserName = [UITextField new];
         _tfUserName.frame = CGRectMake(50, 200, SCREEN_WIDTH-100, 40);
         _tfUserName.placeholder = @"请输入用户名";
+        [_tfUserName setAutocorrectionType:UITextAutocorrectionTypeNo];
+        [_tfUserName setAutocapitalizationType:UITextAutocapitalizationTypeNone];
         [self.view addSubview:_tfUserName];
     }
     return _tfUserName;
@@ -58,6 +75,7 @@
         _tfPassWord = [UITextField new];
         _tfPassWord.frame = CGRectMake(50, self.tfUserName.bottom + 10, SCREEN_WIDTH-100, 40);
         _tfPassWord.placeholder = @"请输入密码";
+        _tfPassWord.secureTextEntry = YES;
         [self.view addSubview:_tfPassWord];
     }
     return _tfPassWord;
@@ -78,7 +96,8 @@
 }
 
 - (void)regist {
-    
+    RegistViewController *registVC = [RegistViewController new];
+    [self.navigationController pushViewController:registVC animated:YES];
 }
 
 - (void)testMysql {
@@ -97,6 +116,21 @@
         }
     } failed:^(NSString *msg) {
         [self showError:msg];
+    }];
+}
+
+- (void)loginEM {
+    [self showMessage:@"正在登录"];
+    [[EMClient sharedClient] loginWithUsername:_tfUserName.text password:_tfPassWord.text completion:^(NSString *aUsername, EMError *aError) {
+        [self hideHUD];
+        if(aError) {
+            [self showError:[NSString stringWithFormat:@"%@",aError]];
+        }else{
+            [[EMClient sharedClient].options setIsAutoLogin:YES]; //自动登录
+            if(_block) {
+                _block(YES);
+            }
+        }
     }];
 }
 

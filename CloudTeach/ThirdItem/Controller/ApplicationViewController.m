@@ -16,10 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = HEX_RGB(0xeeeeee);
-    
-    self.titleLabel.text = @"Application";
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {

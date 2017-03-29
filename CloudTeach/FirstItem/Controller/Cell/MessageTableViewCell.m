@@ -10,7 +10,7 @@
 
 @implementation MessageTableViewCell
 
-- (void)setCellContent:(id)Body withIndexPath:(NSIndexPath *)indexPath {
+- (void)setCellContent:(BaseMessage *)Body withIndexPath:(NSIndexPath *)indexPath {
     self.header.hidden = NO;
     self.content.hidden = NO;
     self.detail.hidden = NO;

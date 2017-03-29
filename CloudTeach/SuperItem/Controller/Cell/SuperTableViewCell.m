@@ -15,7 +15,7 @@
     // Initialization code
 }
 
-- (void)setCellContent:(id)Body withIndexPath:(NSIndexPath *)indexPath {
+- (void)setCellContent:(BaseMessage *)Body withIndexPath:(NSIndexPath *)indexPath {
     
 }
 

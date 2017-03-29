@@ -20,9 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-    
+
     MessageViewController *messageVC = [MessageViewController new];
     messageVC.tabBarItem.title = @"消息";
     
