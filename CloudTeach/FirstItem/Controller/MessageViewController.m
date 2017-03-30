@@ -12,9 +12,9 @@
 #import "ChatViewController.h"
 
 @interface MessageViewController ()<UITableViewDelegate,UITableViewDataSource>
-{
-    NSArray *arrHeaderItem;
-}
+
+@property (nonatomic,strong)UITableView *tableView;
+@property (nonatomic,strong)NSMutableArray *marrConversation;
 @end
 
 @implementation MessageViewController
@@ -22,18 +22,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    arrHeaderItem = @[@"发作业",@"已发作业",@"待定",@"待定",@"发作业",@"已发作业",@"待定",@"待定",@"发作业",@"已发作业",@"待定",@"待定"];
+    self.tableView.hidden = NO;
     
-    
-    [self initTableView];
+    [self getAllConversations];
     // Do any additional setup after loading the view.
 }
 
-- (void)initTableView {
-    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT-64-10) style:UITableViewStyleGrouped];
-    tableView.delegate = self;
-    tableView.dataSource = self;
-    [self.view addSubview:tableView];
+- (void)getAllConversations {
+    [self.marrConversation addObjectsFromArray:[[EMClient sharedClient].chatManager getAllConversations]];
+    [self.tableView reloadData];
+}
+
+- (UITableView *)tableView {
+    if(!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT-64-10) style:UITableViewStyleGrouped];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        [self.view addSubview:_tableView];
+    }
+    return  _tableView;
+}
+
+- (NSMutableArray *)marrConversation {
+    if(!_marrConversation) {
+        _marrConversation = [NSMutableArray array];
+    }
+    return _marrConversation;
 }
 
 #pragma mark tableview delegate
@@ -43,7 +57,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return arrHeaderItem.count;
+    return _marrConversation.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -53,11 +67,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *cellId = @"cell";
     MessageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-    
+    EMConversation *conversation = _marrConversation[indexPath.row];
     if(!cell) {
         cell = [[MessageTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
-        [cell setCellContent:nil withIndexPath:indexPath];
     }
+    
+    [cell setCellContent:conversation withIndexPath:indexPath];
     
     return cell;
 }
@@ -66,6 +81,10 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     ChatViewController *chatVC = [ChatViewController new];
+    EMConversation *conversation = _marrConversation[indexPath.row];
+    chatVC.currentConversation = conversation;
+    Contact *contact = [[Contact alloc] initContactWithName:conversation.latestMessage.from];
+    chatVC.currentContact = contact;
     [self.navigationController pushViewController:chatVC animated:YES];
 }
 

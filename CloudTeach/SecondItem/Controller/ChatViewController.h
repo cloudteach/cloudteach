@@ -9,5 +9,6 @@
 #import "SuperViewController.h"
 
 @interface ChatViewController : SuperViewController
-
+@property (nonatomic,strong)Contact *currentContact;
+@property (nonatomic,strong)EMConversation *currentConversation;
 @end

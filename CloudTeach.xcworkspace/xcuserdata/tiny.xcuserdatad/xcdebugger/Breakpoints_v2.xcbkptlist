@@ -26,7 +26,7 @@
                   moduleName = "CloudTeach"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tiny/Desktop/cloudteach1.0/CloudTeach/LoginItem/Manager/LoginManager.m"
-                  timestampString = "512496791.346097"
+                  timestampString = "512578106.269202"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "23"
@@ -41,7 +41,7 @@
                   moduleName = "CloudTeach"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tiny/Desktop/cloudteach1.0/CloudTeach/LoginItem/Manager/LoginManager.m"
-                  timestampString = "512496791.34904"
+                  timestampString = "512578106.273704"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "23"
@@ -56,7 +56,7 @@
                   moduleName = "CloudTeach"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tiny/Desktop/cloudteach1.0/CloudTeach/LoginItem/Manager/LoginManager.m"
-                  timestampString = "512496791.351461"
+                  timestampString = "512578106.283368"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "23"
@@ -71,7 +71,7 @@
                   moduleName = "CloudTeach"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tiny/Desktop/cloudteach1.0/CloudTeach/LoginItem/Manager/LoginManager.m"
-                  timestampString = "512496791.354381"
+                  timestampString = "512578106.291431"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "23"
@@ -136,12 +136,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CloudTeach/AppDelegate.m"
-            timestampString = "512496657.134982"
+            timestampString = "512573173.671915"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
             landmarkName = "-initRootViewController"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CloudTeach/SecondItem/Manager/MessageManager.m"
+            timestampString = "512573901.463602"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "-cmdMessagesDidReceive:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CloudTeach/SecondItem/Controller/ChatViewController.m"
+            timestampString = "512578095.994027"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "-getSession"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

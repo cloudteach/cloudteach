@@ -10,8 +10,9 @@
 
 @interface MessageTableViewCell : SuperTableViewCell
 
+@property (nonatomic,strong)EMConversation *conversation;
 @property (nonatomic,strong)UIImageView *header;
-@property (nonatomic,strong)UILabel *content;
+@property (nonatomic,strong)UILabel *title;
 @property (nonatomic,strong)UILabel *detail;
 @property (nonatomic,strong)UILabel *time;
 @end

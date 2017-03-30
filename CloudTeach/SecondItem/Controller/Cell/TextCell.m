@@ -10,7 +10,7 @@
 
 @implementation TextCell
 
-- (void)setCellContent:(BaseMessage *)Body withIndexPath:(NSIndexPath *)indexPath {
+- (void)setCellContent:(id)Body withIndexPath:(NSIndexPath *)indexPath {
     [super setCellContent:Body withIndexPath:indexPath];
 }
 
@@ -27,14 +27,14 @@
 }
 
 + (float)cellWidthFromMessage:(BaseMessage *)message withWidth:(float)width{
-    TextMessage *textMessage = (TextMessage *)message;
+    EMTextMessageBody *textMessage = (EMTextMessageBody *)message.body;
     NSString *text = textMessage.text;
     float length = [self getLengthWithText:text];
     return MIN(length, width);
 }
 
 + (float)cellHeightFromMessage:(BaseMessage *)message withWidth:(float)width {
-    TextMessage *textMessage = (TextMessage *)message;
+    EMTextMessageBody *textMessage = (EMTextMessageBody *)message.body;
     NSString *text = textMessage.text;
     
     float height = [self getHeightWithText:text withWidth:width];
@@ -68,7 +68,7 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.labContent.text = ((TextMessage *)self.message).text;
+    self.labContent.text = ((EMTextMessageBody *)self.message.body).text;
     _labContent.frame = CGRectMake(5, 0, self.viewBg.width-10, self.viewBg.height);
 }
 

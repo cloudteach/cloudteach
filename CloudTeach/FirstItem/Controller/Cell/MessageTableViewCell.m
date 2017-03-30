@@ -10,11 +10,8 @@
 
 @implementation MessageTableViewCell
 
-- (void)setCellContent:(BaseMessage *)Body withIndexPath:(NSIndexPath *)indexPath {
-    self.header.hidden = NO;
-    self.content.hidden = NO;
-    self.detail.hidden = NO;
-    self.time.hidden = NO;
+- (void)setCellContent:(id)Body withIndexPath:(NSIndexPath *)indexPath {
+    self.conversation = Body;
 }
 
 - (UIImageView *)header {
@@ -29,17 +26,16 @@
     return _header;
 }
 
-- (UILabel *)content {
-    if(!_content) {
-        _content = [UILabel new];
-        _content.frame = CGRectMake(55, 0, SCREEN_WIDTH - (40+10)*2, 30);
-        _content.textColor = HEX_RGB(0x000000);
-        _content.text = @"潘东";
-        _time.font = [UIFont systemFontOfSize:13];
-        _content.textVerticalAlignment = UITextVerticalAlignmentMiddle;
-        [self.contentView addSubview:_content];
+- (UILabel *)title {
+    if(!_title) {
+        _title = [UILabel new];
+        _title.frame = CGRectMake(55, 0, SCREEN_WIDTH - (40+10)*2, 30);
+        _title.textColor = HEX_RGB(0x000000);
+        _title.font = [UIFont systemFontOfSize:13];
+        _title.textVerticalAlignment = UITextVerticalAlignmentMiddle;
+        [self.contentView addSubview:_title];
     }
-    return _content;
+    return _title;
 }
 
 - (UILabel *)detail {
@@ -47,8 +43,7 @@
         _detail = [UILabel new];
         _detail.frame = CGRectMake(55, 30, SCREEN_WIDTH - 55, 30);
         _detail.textColor = HEX_RGB(0xb1b1b1);
-        _detail.text = @"带领我们走向胜利";
-        _time.font = [UIFont systemFontOfSize:12];
+        _detail.font = [UIFont systemFontOfSize:12];
         _detail.textVerticalAlignment = UITextVerticalAlignmentMiddle;
         [self.contentView addSubview:_detail];
     }
@@ -60,13 +55,51 @@
         _time = [UILabel new];
         _time.frame = CGRectMake(0, 0, SCREEN_WIDTH - 15, 30);
         _time.textColor = HEX_RGB(0xb1b1b1);
-        _time.text = @"2017/12/12 10:10";
         _time.font = [UIFont systemFontOfSize:12];
         _time.textVerticalAlignment = UITextVerticalAlignmentMiddle;
         _time.textAlignment = NSTextAlignmentRight;
         [self.contentView addSubview:_time];
     }
-    return _detail;
+    return _time;
+}
+
+- (void)layoutSubviews {
+    self.header.image = [UIImage imageNamed:@"chatListCellHead"];
+    self.title.text = self.conversation.conversationId;
+    self.detail.text = [self getDetailText];
+    self.time.text = [self getTimeText];;
+}
+
+- (NSString *)getDetailText {
+    NSString *detail = @"未知类型";
+    EMMessageBody *body = self.conversation.latestMessage.body;
+    switch (self.conversation.latestMessage.body.type) {
+        case EMMessageBodyTypeText:
+        {
+            EMTextMessageBody *textBody = (EMTextMessageBody *)body;
+            detail = textBody.text;
+        }
+            break;
+        case EMMessageBodyTypeImage:
+        {
+            detail = @"[图片]";
+        }
+            break;
+        default:
+            break;
+    }
+
+    return detail;
+}
+
+- (NSString *)getTimeText {
+    NSString *time = @"";
+    
+    EMMessage *message = self.conversation.latestMessage;
+    
+    NSDate *messageDate = [NSDate dateWithTimeIntervalInMilliSecondSince1970:(NSTimeInterval)message.timestamp];
+    time = [NSString stringWithFormat:@"%@",[messageDate minuteDescription]];
+    return time;
 }
 
 @end

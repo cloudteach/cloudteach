@@ -10,7 +10,7 @@
 
 @implementation ImageCell
 
-- (void)setCellContent:(BaseMessage *)Body withIndexPath:(NSIndexPath *)indexPath {
+- (void)setCellContent:(id)Body withIndexPath:(NSIndexPath *)indexPath {
     [super setCellContent:Body withIndexPath:indexPath];
 }
 
@@ -38,10 +38,10 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    NSURL *url = [NSURL URLWithString:[((ImageMessage*)self.message).imageUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-    self.imgvContent.frame = CGRectMake(0, 0, 90, 120);
-    [_imgvContent sd_setImageWithURL:url];
+    NSString *filePath = ((EMImageMessageBody*)self.message.body).localPath;
+    _imgvContent.image = [UIImage imageWithContentsOfFile:filePath];
     
+    self.imgvContent.frame = CGRectMake(0, 0, 90, 120);
     self.imgvBubble.hidden = YES;
 }
 

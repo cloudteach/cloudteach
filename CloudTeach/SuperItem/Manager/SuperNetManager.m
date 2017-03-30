@@ -1,18 +1,18 @@
 //
-//  SuperManager.m
+//  SuperNetManager.m
 //  CloudTeach
 //
 //  Created by tiny on 17/3/28.
 //  Copyright © 2017年 tiny. All rights reserved.
 //
 
-#import "SuperManager.h"
+#import "SuperNetManager.h"
 
-static SuperManager *manager = nil;
+static SuperNetManager *manager = nil;
 
-@implementation SuperManager
+@implementation SuperNetManager
 
-+ (SuperManager *)manager {
++ (SuperNetManager *)manager {
     if(!manager) {
         manager = [super manager];
     }

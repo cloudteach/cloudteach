@@ -1,5 +1,5 @@
 //
-//  SuperManager.h
+//  SuperNetManager.h
 //  CloudTeach
 //
 //  Created by tiny on 17/3/28.
@@ -15,7 +15,7 @@
 typedef void(^RequestSuccessBlock)(NSDictionary *result);
 typedef void(^RequestFailedBlock)(NSError *error);
 
-@interface SuperManager : AFHTTPSessionManager
+@interface SuperNetManager : AFHTTPSessionManager
 
 - (void)methodGetRequestWithUrl:(NSString *)url withParam:(NSDictionary *)param success:(RequestSuccessBlock)success failed:(RequestFailedBlock)failed;
 

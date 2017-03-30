@@ -15,7 +15,7 @@ static NSString *push_dev = @"cloudteach_push_development";
 NSString *push_dis = @"cloudteach_push_distribution";
 
 @interface AppDelegate ()
-<EMClientDelegate>
+<EMClientDelegate,EMChatManagerDelegate>
 
 @end
 
@@ -36,6 +36,7 @@ NSString *push_dis = @"cloudteach_push_distribution";
     
     //添加回调监听代理:
     [[EMClient sharedClient] addDelegate:self delegateQueue:nil];
+    [[EMClient sharedClient].chatManager addDelegate:[MessageManager manager] delegateQueue:nil];
 //注册环信-----------------------------------------------------------------------------------
     
     __block UINavigationController *rootNav = nil;
@@ -99,8 +100,14 @@ NSString *push_dis = @"cloudteach_push_distribution";
 
 //统一注册通知
 - (void)addNotifications{
+    //退出登录
     [[NSNotificationCenter defaultCenter] removeObserver:@"initRootViewController"];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(initRootViewController) name:@"initRootViewController" object:nil];
+    
+    //移除消息回调
+//    [[EMClient sharedClient].chatManager removeDelegate:self];
+    //注册消息回调
+//    [[EMClient sharedClient].chatManager addDelegate:self delegateQueue:nil];
 }
 
 //重新设置RootViewController

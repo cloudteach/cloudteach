@@ -12,7 +12,7 @@
 @property (nonatomic,strong) UIImageView *imgvHead;
 @property (nonatomic,strong) UIView *viewBg;
 @property (nonatomic,strong) UIImageView *imgvBubble;
-
+@property (nonatomic,strong) UILabel *labTime;
 @property (nonatomic,strong)BaseMessage *message;
 
 + (float)cellHeightFromMessage:(BaseMessage *)message;

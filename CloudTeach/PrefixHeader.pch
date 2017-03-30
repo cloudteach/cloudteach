@@ -18,19 +18,26 @@
 #define HAD_LOGINED         
 #define LOGIN_STATE         @"login_state"
 
+//system
+#import <objc/runtime.h>
+#import <Photos/Photos.h>
+//third
 #import "UIColor+Theme.h"
 #import "UILabel+VerticalAlignment.h"
 #import "UIView+Additions.h"
 #import <UIImageView+WebCache.h>
 #import <HyphenateLite/EMSDK.h>
-
-#import "BaseMessage.h"
-#import "TextMessage.h"
-#import "ImageMessage.h"
+#import "NSDate+Category.h"
 
 //model
 #import "LoginModel.h"
 
+#import "BaseMessage.h"
+
+#import "Contact.h"
+
+//manager
+#import "MessageManager.h"
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 

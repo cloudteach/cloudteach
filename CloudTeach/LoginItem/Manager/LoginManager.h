@@ -6,8 +6,8 @@
 //  Copyright © 2017年 tiny. All rights reserved.
 //
 
-#import "SuperManager.h"
+#import "SuperNetManager.h"
 
-@interface LoginManager : SuperManager
+@interface LoginManager : SuperNetManager
 - (void)requestLoginInfoWithUserInfo:(NSDictionary *)param success:(RequestSuccessBlock)success failed:(RequestFailedBlock)failed;
 @end

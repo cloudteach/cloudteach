@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface SuperTableViewCell : UITableViewCell
-- (void)setCellContent:(BaseMessage *)Body withIndexPath:(NSIndexPath *)indexPath;
+- (void)setCellContent:(id)Body withIndexPath:(NSIndexPath *)indexPath;
 @end
