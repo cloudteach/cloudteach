@@ -22,7 +22,7 @@
         _imgvContent.layer.borderWidth = 1;
         _imgvContent.layer.cornerRadius = 5;
         [_imgvContent.layer setMasksToBounds:YES];
-        _imgvContent.contentMode = UIViewContentModeScaleAspectFit;
+        _imgvContent.contentMode = UIViewContentModeCenter;
         [self.viewBg addSubview:_imgvContent];
     }
     return _imgvContent;

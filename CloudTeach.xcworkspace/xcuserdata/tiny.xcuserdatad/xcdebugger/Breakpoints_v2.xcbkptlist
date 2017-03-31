@@ -22,16 +22,31 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__60-[LoginManager requestLoginInfoWithUserInfo:success:failed:]_block_invoke"
+                  symbolName = "-[LoginManager requestLoginInfoWithUserInfo:success:failed:]"
                   moduleName = "CloudTeach"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tiny/Desktop/cloudteach1.0/CloudTeach/LoginItem/Manager/LoginManager.m"
-                  timestampString = "512578106.269202"
+                  timestampString = "512635580.852545"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "23"
                   endingLineNumber = "23"
-                  offsetFromSymbolStart = "380">
+                  offsetFromSymbolStart = "272">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__60-[LoginManager requestLoginInfoWithUserInfo:success:failed:]_block_invoke"
+                  moduleName = "CloudTeach"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tiny/Desktop/cloudteach1.0/CloudTeach/LoginItem/Manager/LoginManager.m"
+                  timestampString = "512635580.85744"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "440">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -41,12 +56,12 @@
                   moduleName = "CloudTeach"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tiny/Desktop/cloudteach1.0/CloudTeach/LoginItem/Manager/LoginManager.m"
-                  timestampString = "512578106.273704"
+                  timestampString = "512635580.861369"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "23"
                   endingLineNumber = "23"
-                  offsetFromSymbolStart = "42">
+                  offsetFromSymbolStart = "56">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -56,12 +71,12 @@
                   moduleName = "CloudTeach"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tiny/Desktop/cloudteach1.0/CloudTeach/LoginItem/Manager/LoginManager.m"
-                  timestampString = "512578106.283368"
+                  timestampString = "512635580.863337"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "23"
                   endingLineNumber = "23"
-                  offsetFromSymbolStart = "29">
+                  offsetFromSymbolStart = "36">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -71,12 +86,12 @@
                   moduleName = "CloudTeach"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tiny/Desktop/cloudteach1.0/CloudTeach/LoginItem/Manager/LoginManager.m"
-                  timestampString = "512578106.291431"
+                  timestampString = "512635580.868381"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "23"
                   endingLineNumber = "23"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "24">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -119,22 +134,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CloudTeach/SuperItem/Manager/SuperSqlManager.m"
-            timestampString = "512398239.882614"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "-selectFromDB:withCondition:success:failed:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "CloudTeach/AppDelegate.m"
             timestampString = "512573173.671915"
             startingColumnNumber = "9223372036854775807"
@@ -152,12 +151,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CloudTeach/SecondItem/Manager/MessageManager.m"
-            timestampString = "512573901.463602"
+            timestampString = "512632740.90528"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "-cmdMessagesDidReceive:"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "-messagesDidReceive:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -168,12 +167,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CloudTeach/SecondItem/Controller/ChatViewController.m"
-            timestampString = "512578095.994027"
+            timestampString = "512635580.755723"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "-getSession"
+            startingLineNumber = "269"
+            endingLineNumber = "269"
+            landmarkName = "-didReceiveMessage:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CloudTeach/SecondItem/Controller/ChatViewController.m"
+            timestampString = "512635580.755723"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "315"
+            endingLineNumber = "315"
+            landmarkName = "-sendMessage:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

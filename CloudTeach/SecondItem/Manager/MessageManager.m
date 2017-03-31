@@ -34,9 +34,8 @@ static MessageManager *manager = nil;
  @brief 接收到一条及以上非cmd消息
  */
 - (void)messagesDidReceive:(NSArray *)aMessages {
-    for(EMMessage *message in aMessages) {
-        NSLog(@"----->%@-%@-%@",message.from,message.to,((EMTextMessageBody *)message.body).text);
-    }
+    //如果当前激活的conversation的发送者与消息发送者相同
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"didReceiveMessage" object:aMessages];
 }
 
 /*!

@@ -11,6 +11,7 @@
 @interface MessageTableViewCell : SuperTableViewCell
 
 @property (nonatomic,strong)EMConversation *conversation;
+@property (nonatomic,strong)Contact *contact;
 @property (nonatomic,strong)UIImageView *header;
 @property (nonatomic,strong)UILabel *title;
 @property (nonatomic,strong)UILabel *detail;

@@ -51,6 +51,8 @@
 		2A9D50EE1E89FA0000614B80 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D50ED1E89FA0000614B80 /* LoginViewController.m */; };
 		2A9D50F11E89FC9A00614B80 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D50F01E89FC9A00614B80 /* UIView+Additions.m */; };
 		2A9D50F41E89FF2600614B80 /* SuperNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D50F31E89FF2600614B80 /* SuperNetManager.m */; };
+		2AC313B01E8DDF65000EF9B8 /* ContactSqlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC313AF1E8DDF65000EF9B8 /* ContactSqlManager.m */; };
+		2AC313B71E8DE34A000EF9B8 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC313B61E8DE34A000EF9B8 /* Common.m */; };
 		2ACF301A1E8A032500CA5DE7 /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF30191E8A032500CA5DE7 /* LoginManager.m */; };
 		2ACF30211E8A0C4200CA5DE7 /* MBProgressHUD+NJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF301D1E8A0C4200CA5DE7 /* MBProgressHUD+NJ.m */; };
 		2ACF30221E8A0C4200CA5DE7 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2ACF301E1E8A0C4200CA5DE7 /* MBProgressHUD.bundle */; };
@@ -145,6 +147,10 @@
 		2A9D50F01E89FC9A00614B80 /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
 		2A9D50F21E89FF2600614B80 /* SuperNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperNetManager.h; sourceTree = "<group>"; };
 		2A9D50F31E89FF2600614B80 /* SuperNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperNetManager.m; sourceTree = "<group>"; };
+		2AC313AE1E8DDF65000EF9B8 /* ContactSqlManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactSqlManager.h; sourceTree = "<group>"; };
+		2AC313AF1E8DDF65000EF9B8 /* ContactSqlManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactSqlManager.m; sourceTree = "<group>"; };
+		2AC313B51E8DE34A000EF9B8 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		2AC313B61E8DE34A000EF9B8 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
 		2ACF30181E8A032500CA5DE7 /* LoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginManager.h; sourceTree = "<group>"; };
 		2ACF30191E8A032500CA5DE7 /* LoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginManager.m; sourceTree = "<group>"; };
 		2ACF301C1E8A0C4200CA5DE7 /* MBProgressHUD+NJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+NJ.h"; sourceTree = "<group>"; };
@@ -211,6 +217,8 @@
 			children = (
 				2A5027711E8C9E9700679D52 /* MessageManager.h */,
 				2A5027721E8C9E9700679D52 /* MessageManager.m */,
+				2AC313AE1E8DDF65000EF9B8 /* ContactSqlManager.h */,
+				2AC313AF1E8DDF65000EF9B8 /* ContactSqlManager.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -256,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				2A5027421E8B49CB00679D52 /* CloudTeach.entitlements */,
+				2AC313B41E8DE335000EF9B8 /* Common */,
 				2A9D50DC1E88F8C900614B80 /* SupportItem */,
 				2A9D50C41E88F60400614B80 /* SuperItem */,
 				2A9D50BB1E88F4C300614B80 /* TabItem */,
@@ -511,6 +520,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		2AC313B41E8DE335000EF9B8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2AC313B51E8DE34A000EF9B8 /* Common.h */,
+				2AC313B61E8DE34A000EF9B8 /* Common.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		2ACF301B1E8A0C4200CA5DE7 /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -717,6 +735,7 @@
 				2A9D50D51E88F68300614B80 /* ContactViewController.m in Sources */,
 				2ACF30831E8A676100CA5DE7 /* LoginSqlManager.m in Sources */,
 				2A9D50DF1E88F90300614B80 /* UIColor+Theme.m in Sources */,
+				2AC313B71E8DE34A000EF9B8 /* Common.m in Sources */,
 				2A9D50D81E88F6A200614B80 /* ApplicationViewController.m in Sources */,
 				2A9D50F41E89FF2600614B80 /* SuperNetManager.m in Sources */,
 				2A5027881E8CE14500679D52 /* HPPForTableViewController.m in Sources */,
@@ -746,6 +765,7 @@
 				2A9D50C91E88F61900614B80 /* SuperViewController.m in Sources */,
 				2ACF308D1E8AB0AC00CA5DE7 /* BaseChatCell.m in Sources */,
 				2ACF30901E8AB10100CA5DE7 /* TextCell.m in Sources */,
+				2AC313B01E8DDF65000EF9B8 /* ContactSqlManager.m in Sources */,
 				2A5027661E8C00FE00679D52 /* RegistViewController.m in Sources */,
 				2A9D509F1E88F32400614B80 /* AppDelegate.m in Sources */,
 				2A9D509C1E88F32400614B80 /* main.m in Sources */,

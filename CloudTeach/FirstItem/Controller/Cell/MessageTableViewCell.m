@@ -12,6 +12,7 @@
 
 - (void)setCellContent:(id)Body withIndexPath:(NSIndexPath *)indexPath {
     self.conversation = Body;
+    [self getContact];
 }
 
 - (UIImageView *)header {
@@ -64,10 +65,32 @@
 }
 
 - (void)layoutSubviews {
-    self.header.image = [UIImage imageNamed:@"chatListCellHead"];
+
+    [self getHead];
     self.title.text = self.conversation.conversationId;
     self.detail.text = [self getDetailText];
-    self.time.text = [self getTimeText];;
+    self.time.text = [self getTimeText];
+}
+
+- (void)getContact {
+    NSDictionary *param = @{@"un":self.conversation.conversationId};
+    
+    [[ContactSqlManager manager] selectWithParam:param success:^(NSArray *result) {
+        
+        id object = result.firstObject;
+        self.contact = [[Contact alloc] initWithString:[Common dictionaryOrArrayToJsonString:object] error:nil];
+    } failed:^(NSString *msg) {
+        NSLog(@"");
+    }];
+}
+
+- (void)getHead {
+    
+    if(self.contact.head.length) {
+       [self.header sd_setImageWithURL:[NSURL URLWithString:self.contact.head] placeholderImage:[UIImage imageNamed:@"head"]];
+    }else{
+        
+    }
 }
 
 - (NSString *)getDetailText {

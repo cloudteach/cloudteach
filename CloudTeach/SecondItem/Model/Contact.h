@@ -10,5 +10,6 @@
 
 @interface Contact : SuperModel
 @property (nonatomic,copy) NSString *name;
+@property (nonatomic,copy) NSString *head;
 - (Contact *)initContactWithName:(NSString *)name;
 @end

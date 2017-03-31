@@ -39,6 +39,11 @@
     
     [[NSNotificationCenter defaultCenter] removeObserver:@"didHeadChoosed"];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didHeadChoosed:) name:@"didHeadChoosed" object:nil];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:@"didReceiveMessage"];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveMessage:) name:@"didReceiveMessage" object:nil];
+    
+    
 }
 
 - (NSMutableArray *)marrMessage {
@@ -58,8 +63,7 @@
 - (void)getLocalHistoryMessage {
     [_currentConversation loadMessagesFrom:0 to:[[NSDate date] timeIntervalSince1970]*1000 count:100 completion:^(NSArray *aMessages, EMError *aError) {
         [self.marrMessage addObjectsFromArray:aMessages];
-        [self.tableView reloadData];
-        [self scrollToBottom];
+        [self tableRefreshAndScrollToBottom:NO];
     }];
 }
 
@@ -257,6 +261,17 @@
     }];
 }
 
+- (void)didReceiveMessage:(NSNotification *)userInfo {
+    NSArray *arrNewMessage = userInfo.object;
+    
+    for(EMMessage *message in arrNewMessage) {
+        if([message.from isEqualToString:_currentContact.name]) {
+            [self.marrMessage addObject:message];
+        }
+    }
+    [self tableRefreshAndScrollToBottom:YES];
+}
+
 - (void)didHeadChoosed:(NSNotification *)userInfo {
     NSDictionary *dicHead = userInfo.object;
     UIImage *image = dicHead[@"head"];
@@ -268,9 +283,9 @@
 
 - (void)makeTextMessage {
     EMTextMessageBody *body = [[EMTextMessageBody alloc] initWithText:tfMessage.text];
-    NSString *from = [[EMClient sharedClient] currentUsername];
-    
     tfMessage.text = @"";
+    
+    NSString *from = [[EMClient sharedClient] currentUsername];
     
     //生成Message
     EMMessage *message = [[EMMessage alloc] initWithConversationID:_currentConversation.conversationId from:from to:_currentContact.name body:body ext:_currentConversation.ext];
@@ -298,30 +313,35 @@
     } completion:^(EMMessage *message, EMError *error) {
         if(!error && message) {
             [self.marrMessage addObject:message];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self.tableView reloadData];
-                [self scrollToBottom];
-            });
+            [self tableRefreshAndScrollToBottom:YES];
         }
     }];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self makeTextMessage];
     [textField resignFirstResponder];
     return YES;
 }
 
-- (void)scrollToBottom {
+- (void)tableRefreshAndScrollToBottom:(BOOL)animation {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.tableView reloadData];
+        [self scrollToBottom:animation];
+    });
+}
+
+- (void)scrollToBottom:(BOOL)animation {
     //判断tableView是否滑动到底部 如果没有 则滑动到底部
     CGPoint contentOffsetPoint = self.tableView.contentOffset;
     CGRect frame = self.tableView.frame;
-    if(contentOffsetPoint.y==self.tableView.contentSize.height-frame.size.height || self.tableView.contentSize.height<frame.size.height)
+    if(contentOffsetPoint.y == self.tableView.contentSize.height-frame.size.height || self.tableView.contentSize.height < frame.size.height)
     {
         NSLog(@"scrolled end");
     }else
     {
         CGPoint bottomPoint = CGPointMake(0,self.tableView.contentSize.height-frame.size.height);
-        [self.tableView setContentOffset:bottomPoint animated:YES];
+        [self.tableView setContentOffset:bottomPoint animated:animation];
     }
 }
 

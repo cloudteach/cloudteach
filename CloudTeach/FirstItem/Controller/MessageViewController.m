@@ -29,7 +29,13 @@
 }
 
 - (void)getAllConversations {
-    [self.marrConversation addObjectsFromArray:[[EMClient sharedClient].chatManager getAllConversations]];
+//    [self.marrConversation addObjectsFromArray:[[EMClient sharedClient].chatManager getAllConversations]];
+    NSArray *arrConversation = [[EMClient sharedClient].chatManager getAllConversations];
+    for(EMConversation *conversation in arrConversation) {
+        if(![conversation.conversationId isEqualToString:[[EMClient sharedClient] currentUsername]]) {
+            [self.marrConversation addObject:conversation];
+        }
+    }
     [self.tableView reloadData];
 }
 
@@ -83,7 +89,7 @@
     ChatViewController *chatVC = [ChatViewController new];
     EMConversation *conversation = _marrConversation[indexPath.row];
     chatVC.currentConversation = conversation;
-    Contact *contact = [[Contact alloc] initContactWithName:conversation.latestMessage.from];
+    Contact *contact = [[Contact alloc] initContactWithName:conversation.conversationId];
     chatVC.currentContact = contact;
     [self.navigationController pushViewController:chatVC animated:YES];
 }

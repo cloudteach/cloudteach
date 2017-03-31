@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface SuperMessageManager : NSObject
-- (NSString *)dictionaryOrArrayToJsonString:(id)dictOrArray;
+
 @end

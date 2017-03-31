@@ -93,7 +93,7 @@
     
     ChatViewController *chatVC = [ChatViewController new];
     Contact *contact = arrContacts[indexPath.row];
-    chatVC.currentContact = [contact copy];
+    chatVC.currentContact = contact;
     [self.navigationController pushViewController:chatVC animated:YES];
 }
 
