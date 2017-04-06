@@ -23,17 +23,25 @@
 
     MessageViewController *messageVC = [MessageViewController new];
     messageVC.tabBarItem.title = @"消息";
+    messageVC.tabBarItem.image = [[UIImage imageNamed:@"message"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    messageVC.tabBarItem.selectedImage = [[UIImage imageNamed:@"message_select"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
-    ContactViewController *contacVC = [ContactViewController new];
-    contacVC.tabBarItem.title = @"联系人";
+    ContactViewController *contactVC = [ContactViewController new];
+    contactVC.tabBarItem.title = @"联系人";
+    contactVC.tabBarItem.image = [[UIImage imageNamed:@"contact"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    contactVC.tabBarItem.selectedImage = [[UIImage imageNamed:@"contact_select"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     ApplicationViewController *applicationVC = [ApplicationViewController new];
     applicationVC.tabBarItem.title = @"应用";
+    applicationVC.tabBarItem.image = [[UIImage imageNamed:@"application"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    applicationVC.tabBarItem.selectedImage = [[UIImage imageNamed:@"application_select"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     MyViewController *myVC = [MyViewController new];
     myVC.tabBarItem.title = @"我的";
+    myVC.tabBarItem.image = [[UIImage imageNamed:@"my"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    myVC.tabBarItem.selectedImage = [[UIImage imageNamed:@"my_select"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
-    self.viewControllers = @[messageVC,contacVC,applicationVC,myVC];
+    self.viewControllers = @[messageVC,contactVC,applicationVC,myVC];
     
     
     // Do any additional setup after loading the view.

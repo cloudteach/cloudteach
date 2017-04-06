@@ -96,8 +96,14 @@
 }
 
 - (void)regist {
+    [self resiginKeBoard];
     RegistViewController *registVC = [RegistViewController new];
     [self.navigationController pushViewController:registVC animated:YES];
+}
+
+- (void)resiginKeBoard {
+    if(_tfUserName.firstBaselineAnchor) [_tfUserName resignFirstResponder];
+    if(_tfPassWord.firstBaselineAnchor) [_tfPassWord resignFirstResponder];
 }
 
 - (void)testMysql {
@@ -120,6 +126,7 @@
 }
 
 - (void)loginEM {
+    [self resiginKeBoard];
     [self showMessage:@"正在登录"];
     [[EMClient sharedClient] loginWithUsername:_tfUserName.text password:_tfPassWord.text completion:^(NSString *aUsername, EMError *aError) {
         [self hideHUD];

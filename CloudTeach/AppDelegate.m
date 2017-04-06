@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "CTTabBarViewController.h"
 #import "LoginViewController.h"
+#import <Bugly/Bugly.h>
 
 static NSString *appdkey_forEM = @"1194170328115410#cloudteach";
 static NSString *push_dev = @"cloudteach_push_development";
@@ -26,6 +27,23 @@ NSString *push_dis = @"cloudteach_push_distribution";
     
     //注册通知
     [self addNotifications];
+    
+    //注册Bugly
+    BuglyConfig *txBuglyConfig = [BuglyConfig new];
+    txBuglyConfig.blockMonitorEnable = NO;
+    txBuglyConfig.blockMonitorTimeout = 0.2f;
+    txBuglyConfig.reportLogLevel = BuglyLogLevelInfo;
+    txBuglyConfig.version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+    txBuglyConfig.consolelogEnable = NO;
+    [Bugly startWithAppId:@"d0a9d43215" config:txBuglyConfig];
+    
+    if([[EMClient sharedClient] currentUsername].length) {
+        //设置bugly用户标识
+        [Bugly setUserIdentifier:[[EMClient sharedClient] currentUsername]];
+    }else{
+        //设置bugly用户标识
+        [Bugly setUserIdentifier:@"noLogin"];
+    }
     
 //注册环信-----------------------------------------------------------------------------------
     //AppKey:注册的AppKey，详细见下面注释。
@@ -49,6 +67,9 @@ NSString *push_dis = @"cloudteach_push_distribution";
         LoginViewController *loginVC = [LoginViewController new];
         loginVC.block = ^(BOOL finish) {
             if(finish) {
+                //设置bugly用户标识
+                [Bugly setUserIdentifier:[[EMClient sharedClient] currentUsername]];
+                
                 CTTabBarViewController *ctTabBarVC = [CTTabBarViewController new];
                 rootNav = [[UINavigationController alloc] initWithRootViewController:ctTabBarVC];
                 self.window.rootViewController = rootNav;
@@ -118,6 +139,9 @@ NSString *push_dis = @"cloudteach_push_distribution";
     __block UINavigationController *rootNav = nil;
     loginVC.block = ^(BOOL finish) {
         if(finish) {
+            //设置bugly用户标识
+            [Bugly setUserIdentifier:[[EMClient sharedClient] currentUsername]];
+            
             CTTabBarViewController *ctTabBarVC = [CTTabBarViewController new];
             rootNav = [[UINavigationController alloc] initWithRootViewController:ctTabBarVC];
             self.window.rootViewController = rootNav;

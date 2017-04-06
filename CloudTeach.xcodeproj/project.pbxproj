@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A2565191E8F3E4800ECDB5A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A2565181E8F3E4800ECDB5A /* Security.framework */; };
+		2A25653F1E947D8B00ECDB5A /* TestAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A25653E1E947D8B00ECDB5A /* TestAViewController.m */; };
+		2A2565421E947D9C00ECDB5A /* TestBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2565411E947D9C00ECDB5A /* TestBViewController.m */; };
+		2A2565451E948FF200ECDB5A /* SuperScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2565441E948FF200ECDB5A /* SuperScrollViewController.m */; };
 		2A5027451E8B4BE400679D52 /* ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A5027441E8B4BE400679D52 /* ImageCell.m */; };
 		2A5027491E8B61C700679D52 /* BaseMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A5027481E8B61C700679D52 /* BaseMessage.m */; };
 		2A5027511E8BF7FB00679D52 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5027501E8BF7FB00679D52 /* CoreMedia.framework */; };
@@ -69,6 +73,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A2565181E8F3E4800ECDB5A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		2A25653D1E947D8B00ECDB5A /* TestAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestAViewController.h; sourceTree = "<group>"; };
+		2A25653E1E947D8B00ECDB5A /* TestAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestAViewController.m; sourceTree = "<group>"; };
+		2A2565401E947D9C00ECDB5A /* TestBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestBViewController.h; sourceTree = "<group>"; };
+		2A2565411E947D9C00ECDB5A /* TestBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestBViewController.m; sourceTree = "<group>"; };
+		2A2565431E948FF200ECDB5A /* SuperScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperScrollViewController.h; sourceTree = "<group>"; };
+		2A2565441E948FF200ECDB5A /* SuperScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperScrollViewController.m; sourceTree = "<group>"; };
 		2A5027421E8B49CB00679D52 /* CloudTeach.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CloudTeach.entitlements; sourceTree = "<group>"; };
 		2A5027431E8B4BE400679D52 /* ImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCell.h; sourceTree = "<group>"; };
 		2A5027441E8B4BE400679D52 /* ImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCell.m; sourceTree = "<group>"; };
@@ -183,6 +194,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A2565191E8F3E4800ECDB5A /* Security.framework in Frameworks */,
 				2A5027631E8BF85400679D52 /* libiconv.tbd in Frameworks */,
 				2A5027611E8BF84A00679D52 /* libsqlite3.tbd in Frameworks */,
 				2A50275F1E8BF84300679D52 /* libstdc++.6.0.9.tbd in Frameworks */,
@@ -472,6 +484,12 @@
 			children = (
 				2A9D50D61E88F6A200614B80 /* ApplicationViewController.h */,
 				2A9D50D71E88F6A200614B80 /* ApplicationViewController.m */,
+				2A2565431E948FF200ECDB5A /* SuperScrollViewController.h */,
+				2A2565441E948FF200ECDB5A /* SuperScrollViewController.m */,
+				2A25653D1E947D8B00ECDB5A /* TestAViewController.h */,
+				2A25653E1E947D8B00ECDB5A /* TestAViewController.m */,
+				2A2565401E947D9C00ECDB5A /* TestBViewController.h */,
+				2A2565411E947D9C00ECDB5A /* TestBViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -586,6 +604,7 @@
 		E3C22182AD8EA850E2DAC8BA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2A2565181E8F3E4800ECDB5A /* Security.framework */,
 				2A5027621E8BF85400679D52 /* libiconv.tbd */,
 				2A5027601E8BF84A00679D52 /* libsqlite3.tbd */,
 				2A50275E1E8BF84300679D52 /* libstdc++.6.0.9.tbd */,
@@ -735,6 +754,7 @@
 				2A9D50D51E88F68300614B80 /* ContactViewController.m in Sources */,
 				2ACF30831E8A676100CA5DE7 /* LoginSqlManager.m in Sources */,
 				2A9D50DF1E88F90300614B80 /* UIColor+Theme.m in Sources */,
+				2A25653F1E947D8B00ECDB5A /* TestAViewController.m in Sources */,
 				2AC313B71E8DE34A000EF9B8 /* Common.m in Sources */,
 				2A9D50D81E88F6A200614B80 /* ApplicationViewController.m in Sources */,
 				2A9D50F41E89FF2600614B80 /* SuperNetManager.m in Sources */,
@@ -759,6 +779,7 @@
 				2ACF30861E8AA25800CA5DE7 /* ChatViewController.m in Sources */,
 				2A5027781E8CDBBD00679D52 /* NSDate+Category.m in Sources */,
 				2A50278A1E8CE14500679D52 /* HPPPreViewController.m in Sources */,
+				2A2565421E947D9C00ECDB5A /* TestBViewController.m in Sources */,
 				2A9D50EB1E8919C000614B80 /* UILabel+VerticalAlignment.m in Sources */,
 				2A9D50C01E88F52500614B80 /* CTTabBarViewController.m in Sources */,
 				2ACF30281E8A344D00CA5DE7 /* SuperModel.m in Sources */,
@@ -774,6 +795,7 @@
 				2A5027451E8B4BE400679D52 /* ImageCell.m in Sources */,
 				2A5027871E8CE14500679D52 /* HPPForCollectionViewController.m in Sources */,
 				2ACF302B1E8A348700CA5DE7 /* LoginModel.m in Sources */,
+				2A2565451E948FF200ECDB5A /* SuperScrollViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

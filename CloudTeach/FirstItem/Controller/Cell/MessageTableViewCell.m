@@ -89,7 +89,7 @@
     if(self.contact.head.length) {
        [self.header sd_setImageWithURL:[NSURL URLWithString:self.contact.head] placeholderImage:[UIImage imageNamed:@"head"]];
     }else{
-        
+        [self.header sd_setImageWithURL:nil placeholderImage:[UIImage imageNamed:@"head"]];
     }
 }
 

@@ -6,4 +6,5 @@ pod 'JSONModel', '~> 1.5.1'
 pod 'OHMySQL', '~> 0.3.0'
 pod 'SDWebImage', '~> 3.8.2'
 pod 'HyphenateLite'
+pod 'Bugly'
 end

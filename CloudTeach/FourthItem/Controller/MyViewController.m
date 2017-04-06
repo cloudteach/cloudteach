@@ -8,6 +8,10 @@
 
 #import "MyViewController.h"
 
+#import "HPPForTableViewController.h"
+#import "HPPForCollectionViewController.h"
+#import "HPPNavigationController.h"
+
 @interface MyViewController ()
 @property (nonatomic,strong)UIImageView *imgvHead;
 @end
@@ -18,6 +22,9 @@
     [super viewDidLoad];
     
     [self initUI];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:@"didHeadChoosed"];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didHeadChoosed:) name:@"didHeadChoosed" object:nil];
 }
 
 - (void)initUI {
@@ -54,7 +61,87 @@
 }
 
 - (void)changeHead {
-    NSLog(@"---");
+    //set up fetch options, mediaType is image.
+    
+    NSMutableArray <PHAssetCollection *>*marrAllAlbums = [NSMutableArray array];
+    
+    PHFetchResult *smartAlbums = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeSmartAlbum subtype:PHAssetCollectionSubtypeAlbumRegular options:nil];
+    
+    for(PHAssetCollection *assetCollection in smartAlbums) {
+        [marrAllAlbums addObject:assetCollection];
+    }
+    
+    PHFetchResult *otherAlbums = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeAlbum subtype:PHAssetCollectionSubtypeAlbumRegular options:nil];
+    
+    for(PHAssetCollection *assetCollection in otherAlbums) {
+        [marrAllAlbums addObject:assetCollection];
+    }
+    
+    //    PHFetchResult *momentAlbums = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeMoment subtype:PHAssetCollectionSubtypeAlbumRegular options:nil];
+    //
+    //    for(PHAssetCollection *assetCollection in momentAlbums) {
+    //        [marrAllAlbums addObject:assetCollection];
+    //    }
+    
+    PHFetchResult *allAlbums = [(PHFetchResult *)marrAllAlbums copy];
+    
+    PHFetchOptions *options = [[PHFetchOptions alloc] init];
+    options.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:NO]];
+    options.predicate = [NSPredicate predicateWithFormat:@"mediaType = %d",PHAssetMediaTypeImage];
+    
+    NSMutableArray <PHAssetCollection *>*marrSmartAlbums = [NSMutableArray array];
+    
+    HPPForCollectionViewController *collection = [HPPForCollectionViewController new];
+    
+    NSMutableArray *marrCollection = [NSMutableArray array];
+    NSMutableArray *marrResult = [NSMutableArray array];
+    
+    for(PHAssetCollection *assetCollection in allAlbums) {
+        PHFetchResult *assetsFetchResult = [PHAsset fetchAssetsInAssetCollection:assetCollection options:options];
+        
+        if(assetsFetchResult.count) {
+            
+            if(marrCollection.count == 0 && marrResult.count == 0) {
+                [marrCollection addObject:assetCollection];
+                [marrResult addObject:assetsFetchResult];
+            }else{
+                
+                if(assetsFetchResult.count > ((PHFetchResult *)marrResult.firstObject).count) {
+                    [marrCollection insertObject:assetCollection atIndex:0];
+                    [marrResult insertObject:assetsFetchResult atIndex:0];
+                }else{
+                    [marrCollection addObject:assetCollection];
+                    [marrResult addObject:assetsFetchResult];
+                }
+            }
+            
+        }
+    }
+    
+    for(PHAssetCollection *collection in marrCollection) {
+        [marrSmartAlbums addObject:[collection copy]];
+    }
+    
+    if(0 == marrSmartAlbums.count) {
+        [self showTip:@"相册初始化中..."];
+        return;
+    }
+    
+    HPPForTableViewController *tableView = [HPPForTableViewController new];
+    tableView.fetchResult = [marrSmartAlbums copy];
+    
+    HPPNavigationController *nav = [[HPPNavigationController alloc] initWithRootViewController:tableView];
+    
+    collection.assetResult = (PHFetchResult *)marrResult.firstObject;
+    collection.titleText = ((PHAssetCollection *)[marrCollection.firstObject copy]).localizedTitle;
+    
+    NSMutableArray *marrRoot = [NSMutableArray arrayWithArray:nav.viewControllers];
+    [marrRoot addObject:collection];
+    nav.viewControllers = [NSArray arrayWithArray:marrRoot];
+    
+    [self presentViewController:nav animated:YES completion:^{
+        
+    }];
 }
 
 - (void)logout {
@@ -66,6 +153,15 @@
             [self showSuccess:@"退出登录成功"];
         }
     }];
+}
+
+- (void)didHeadChoosed:(NSNotification *)userInfo {
+    NSDictionary *dicHead = userInfo.object;
+    UIImage *image = dicHead[@"head"];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        self.imgvHead.image = image;
+    });
 }
 
 - (void)initRootViewController {

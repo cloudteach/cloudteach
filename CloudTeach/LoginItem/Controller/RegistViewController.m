@@ -9,7 +9,8 @@
 #import "RegistViewController.h"
 
 @interface RegistViewController ()
-
+@property (nonatomic,strong)UITextField *tfUserName;
+@property (nonatomic,strong)UITextField *tfPassWord;
 @end
 
 @implementation RegistViewController
@@ -31,7 +32,7 @@
     [self.view insertSubview:imgvBg atIndex:0];
     
     UIButton *btnLogin = [UIButton buttonWithType:UIButtonTypeSystem];
-    btnLogin.frame = CGRectMake(10, 120, SCREEN_WIDTH-20, 40);
+    btnLogin.frame = CGRectMake(10, self.tfPassWord.bottom + 20, SCREEN_WIDTH-20, 40);
     btnLogin.layer.cornerRadius = 5;
     btnLogin.layer.borderColor = HEX_RGB(0x000000).CGColor;
     btnLogin.layer.borderWidth = 1;
@@ -41,14 +42,44 @@
     [self.view addSubview:btnLogin];
 }
 
+- (UITextField *)tfUserName {
+    if(!_tfUserName) {
+        _tfUserName = [UITextField new];
+        _tfUserName.frame = CGRectMake(50, 200, SCREEN_WIDTH-100, 40);
+        _tfUserName.placeholder = @"请输入用户名";
+        [_tfUserName setAutocorrectionType:UITextAutocorrectionTypeNo];
+        [_tfUserName setAutocapitalizationType:UITextAutocapitalizationTypeNone];
+        [self.view addSubview:_tfUserName];
+    }
+    return _tfUserName;
+}
+
+- (UITextField *)tfPassWord {
+    if(!_tfPassWord) {
+        _tfPassWord = [UITextField new];
+        _tfPassWord.frame = CGRectMake(50, self.tfUserName.bottom + 10, SCREEN_WIDTH-100, 40);
+        _tfPassWord.placeholder = @"请输入密码";
+        _tfPassWord.secureTextEntry = YES;
+        [self.view addSubview:_tfPassWord];
+    }
+    return _tfPassWord;
+}
+
 - (void)regist {
-    [[EMClient sharedClient] registerWithUsername:@"fish" password:@"fish" completion:^(NSString *aUsername, EMError *aError) {
+    [self resiginKeBoard];
+    [[EMClient sharedClient] registerWithUsername:_tfUserName.text password:_tfPassWord.text completion:^(NSString *aUsername, EMError *aError) {
         if(aError) {
             [self showError:[NSString stringWithFormat:@"%@",aError]];
         }else{
             [self showSuccess:@"注册成功"];
+            [self.navigationController popViewControllerAnimated:YES];
         }
     }];
+}
+
+- (void)resiginKeBoard {
+    if(_tfUserName.firstBaselineAnchor) [_tfUserName resignFirstResponder];
+    if(_tfPassWord.firstBaselineAnchor) [_tfPassWord resignFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning {
