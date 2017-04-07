@@ -14,6 +14,25 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - AVOSCloud (3.4.4)
+  - AVOSCloudCrashReporting (3.4.4):
+    - AVOSCloud (= 3.4.4)
+    - AVOSCloudCrashReporting/_ARC (= 3.4.4)
+    - AVOSCloudCrashReporting/_NOARC (= 3.4.4)
+  - AVOSCloudCrashReporting/_ARC (3.4.4):
+    - AVOSCloud (= 3.4.4)
+    - AVOSCloudCrashReporting/_NOARC (= 3.4.4)
+  - AVOSCloudCrashReporting/_NOARC (3.4.4):
+    - AVOSCloud (= 3.4.4)
+  - AVOSCloudIM (3.4.4):
+    - AVOSCloud (= 3.4.4)
+    - AVOSCloudIM/_ARC (= 3.4.4)
+    - AVOSCloudIM/_NOARC (= 3.4.4)
+  - AVOSCloudIM/_ARC (3.4.4):
+    - AVOSCloud (= 3.4.4)
+    - AVOSCloudIM/_NOARC (= 3.4.4)
+  - AVOSCloudIM/_NOARC (3.4.4):
+    - AVOSCloud (= 3.4.4)
   - Bugly (2.4.2)
   - HyphenateLite (3.1.5.1)
   - JSONModel (1.5.1)
@@ -26,6 +45,9 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
+  - AVOSCloud
+  - AVOSCloudCrashReporting
+  - AVOSCloudIM
   - Bugly
   - HyphenateLite
   - JSONModel (~> 1.5.1)
@@ -34,6 +56,9 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AVOSCloud: 50a81ba9fe043750592355d13589b108771f3724
+  AVOSCloudCrashReporting: b1e94cb0929b1f7b688d8c7995b248583af2b58d
+  AVOSCloudIM: ad650bf0635e95b12d1aec156131b71d320086d2
   Bugly: b09cd3c7e54048a0e079be88a7a99610f14eab8f
   HyphenateLite: 7f4bbb7e38917dfbdcc5247fe15c6a0df0f38069
   JSONModel: fd2553dc9e6608a3f35bfc956a14be35395d3852
@@ -41,6 +66,6 @@ SPEC CHECKSUMS:
   OHMySQL: b227ffdafaaf1c55e90a31720d502c4387338ffd
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
 
-PODFILE CHECKSUM: fdc915e7ca56d86c16f019a6dbddc7e27754c326
+PODFILE CHECKSUM: 19f28fe4c61aacc8d375ea36cb8f66eeed7c192b
 
 COCOAPODS: 1.2.0

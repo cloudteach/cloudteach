@@ -28,6 +28,16 @@ NSString *push_dis = @"cloudteach_push_distribution";
     //注册通知
     [self addNotifications];
     
+    //注册LeanCloud
+    // 使用美国站点需要增加以下代码：
+    // [AVOSCloud setServiceRegion:AVServiceRegionUS];
+    
+    [AVOSCloud setApplicationId:@"dXzaV0XEdwxatS0EHtywNKvI-gzGzoHsz" clientKey:@"0Hf3C3PO7v3xd5CavYYU5Ri3"];
+    
+    // 放在 SDK 初始化语句 [AVOSCloud setApplicationId:] 后面，只需要调用一次即可
+    // 发布前请关闭
+    [AVOSCloud setAllLogsEnabled:YES];
+    
     //注册Bugly
     BuglyConfig *txBuglyConfig = [BuglyConfig new];
     txBuglyConfig.blockMonitorEnable = NO;

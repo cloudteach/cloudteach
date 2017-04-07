@@ -73,6 +73,15 @@
         }else{
             [self showSuccess:@"注册成功"];
             [self.navigationController popViewControllerAnimated:YES];
+            
+            //保存到数据库
+            AVObject *testObject = [AVObject objectWithClassName:@"cloudteach_user"];
+            [testObject setObject:aUsername forKey:@"ct_username"];
+            if([testObject save]) {
+                NSLog(@"保存到数据库成功");
+            }else{
+                NSLog(@"保存到数据库失败");
+            }
         }
     }];
 }

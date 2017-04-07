@@ -26,7 +26,7 @@
                   moduleName = "CloudTeach"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tiny/Desktop/cloudteach1.0/CloudTeach/LoginItem/Manager/LoginManager.m"
-                  timestampString = "513141708.851444"
+                  timestampString = "513159455.271684"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "23"
@@ -41,7 +41,7 @@
                   moduleName = "CloudTeach"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tiny/Desktop/cloudteach1.0/CloudTeach/LoginItem/Manager/LoginManager.m"
-                  timestampString = "513141708.853617"
+                  timestampString = "513159455.273122"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "23"
@@ -56,7 +56,7 @@
                   moduleName = "CloudTeach"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tiny/Desktop/cloudteach1.0/CloudTeach/LoginItem/Manager/LoginManager.m"
-                  timestampString = "513141708.856062"
+                  timestampString = "513159455.274565"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "23"
@@ -71,7 +71,7 @@
                   moduleName = "CloudTeach"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tiny/Desktop/cloudteach1.0/CloudTeach/LoginItem/Manager/LoginManager.m"
-                  timestampString = "513141708.859411"
+                  timestampString = "513159455.27598"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "23"
@@ -86,7 +86,7 @@
                   moduleName = "CloudTeach"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tiny/Desktop/cloudteach1.0/CloudTeach/LoginItem/Manager/LoginManager.m"
-                  timestampString = "513141708.861536"
+                  timestampString = "513159455.277298"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "23"
@@ -135,11 +135,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CloudTeach/AppDelegate.m"
-            timestampString = "512705114.121017"
+            timestampString = "513159267.10167"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
             landmarkName = "-initRootViewController"
             landmarkType = "7">
          </BreakpointContent>
@@ -205,6 +205,22 @@
             startingLineNumber = "45"
             endingLineNumber = "45"
             landmarkName = "-scrollViewDidScroll:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CloudTeach/LoginItem/Controller/RegistViewController.m"
+            timestampString = "513159453.606119"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "-regist"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -28,6 +28,7 @@
 #import <UIImageView+WebCache.h>
 #import <HyphenateLite/EMSDK.h>
 #import "NSDate+Category.h"
+#import <AVOSCloud/AVOSCloud.h>
 
 //model
 #import "LoginModel.h"

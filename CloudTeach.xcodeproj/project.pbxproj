@@ -55,6 +55,9 @@
 		2A9D50EE1E89FA0000614B80 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D50ED1E89FA0000614B80 /* LoginViewController.m */; };
 		2A9D50F11E89FC9A00614B80 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D50F01E89FC9A00614B80 /* UIView+Additions.m */; };
 		2A9D50F41E89FF2600614B80 /* SuperNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D50F31E89FF2600614B80 /* SuperNetManager.m */; };
+		2AB3402B1E962CD000ED39A8 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AB3402A1E962CD000ED39A8 /* libicucore.tbd */; };
+		2AB3402D1E962D0D00ED39A8 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AB3402C1E962D0D00ED39A8 /* CoreTelephony.framework */; };
+		2AB3402F1E962D1E00ED39A8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AB3402E1E962D1E00ED39A8 /* CoreLocation.framework */; };
 		2AC313B01E8DDF65000EF9B8 /* ContactSqlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC313AF1E8DDF65000EF9B8 /* ContactSqlManager.m */; };
 		2AC313B71E8DE34A000EF9B8 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC313B61E8DE34A000EF9B8 /* Common.m */; };
 		2ACF301A1E8A032500CA5DE7 /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF30191E8A032500CA5DE7 /* LoginManager.m */; };
@@ -158,6 +161,9 @@
 		2A9D50F01E89FC9A00614B80 /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
 		2A9D50F21E89FF2600614B80 /* SuperNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperNetManager.h; sourceTree = "<group>"; };
 		2A9D50F31E89FF2600614B80 /* SuperNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperNetManager.m; sourceTree = "<group>"; };
+		2AB3402A1E962CD000ED39A8 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		2AB3402C1E962D0D00ED39A8 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		2AB3402E1E962D1E00ED39A8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		2AC313AE1E8DDF65000EF9B8 /* ContactSqlManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactSqlManager.h; sourceTree = "<group>"; };
 		2AC313AF1E8DDF65000EF9B8 /* ContactSqlManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactSqlManager.m; sourceTree = "<group>"; };
 		2AC313B51E8DE34A000EF9B8 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
@@ -194,14 +200,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AB3402F1E962D1E00ED39A8 /* CoreLocation.framework in Frameworks */,
+				2AB3402D1E962D0D00ED39A8 /* CoreTelephony.framework in Frameworks */,
+				2A5027571E8BF81900679D52 /* MobileCoreServices.framework in Frameworks */,
+				2A5027611E8BF84A00679D52 /* libsqlite3.tbd in Frameworks */,
+				2AB3402B1E962CD000ED39A8 /* libicucore.tbd in Frameworks */,
 				2A2565191E8F3E4800ECDB5A /* Security.framework in Frameworks */,
 				2A5027631E8BF85400679D52 /* libiconv.tbd in Frameworks */,
-				2A5027611E8BF84A00679D52 /* libsqlite3.tbd in Frameworks */,
 				2A50275F1E8BF84300679D52 /* libstdc++.6.0.9.tbd in Frameworks */,
 				2A50275D1E8BF83600679D52 /* libz.tbd in Frameworks */,
 				2A50275B1E8BF82B00679D52 /* libc++.tbd in Frameworks */,
 				2A5027591E8BF82100679D52 /* ImageIO.framework in Frameworks */,
-				2A5027571E8BF81900679D52 /* MobileCoreServices.framework in Frameworks */,
 				2A5027551E8BF81000679D52 /* AVFoundation.framework in Frameworks */,
 				2A5027531E8BF80900679D52 /* AudioToolbox.framework in Frameworks */,
 				2A5027511E8BF7FB00679D52 /* CoreMedia.framework in Frameworks */,
@@ -604,6 +613,9 @@
 		E3C22182AD8EA850E2DAC8BA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2AB3402E1E962D1E00ED39A8 /* CoreLocation.framework */,
+				2AB3402C1E962D0D00ED39A8 /* CoreTelephony.framework */,
+				2AB3402A1E962CD000ED39A8 /* libicucore.tbd */,
 				2A2565181E8F3E4800ECDB5A /* Security.framework */,
 				2A5027621E8BF85400679D52 /* libiconv.tbd */,
 				2A5027601E8BF84A00679D52 /* libsqlite3.tbd */,
