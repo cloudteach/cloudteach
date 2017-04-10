@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>HappyDNS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>JSONModel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -35,6 +40,11 @@
 			<false/>
 		</dict>
 		<key>Pods-CloudTeach.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Qiniu.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -52,7 +62,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>419EBB0511FF770364F86DCC091BF3CF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>4D8534BB2DAD51D0AF12A48BAB15E2C4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>53B2B897D64E4516E75AC86348B86622</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,12 +82,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>72565589D21FFBAA89DC40606EF973D0</key>
+		<key>82CA472C54474A3DCD2B0B62A702AB79</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>82CA472C54474A3DCD2B0B62A702AB79</key>
+		<key>90B0F35E58C8CA6B50EDB112532AF413</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,7 +102,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A8D819268ECA795E57C0504D888ACF27</key>
+		<key>DAA1726D91D1342B0B9C9167ADE6013B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

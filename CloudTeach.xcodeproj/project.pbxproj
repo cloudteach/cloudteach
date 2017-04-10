@@ -58,6 +58,7 @@
 		2AB3402B1E962CD000ED39A8 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AB3402A1E962CD000ED39A8 /* libicucore.tbd */; };
 		2AB3402D1E962D0D00ED39A8 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AB3402C1E962D0D00ED39A8 /* CoreTelephony.framework */; };
 		2AB3402F1E962D1E00ED39A8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AB3402E1E962D1E00ED39A8 /* CoreLocation.framework */; };
+		2ABFD7B71E97925400EBCC4F /* QNTokenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ABFD7B61E97925400EBCC4F /* QNTokenManager.m */; };
 		2AC313B01E8DDF65000EF9B8 /* ContactSqlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC313AF1E8DDF65000EF9B8 /* ContactSqlManager.m */; };
 		2AC313B71E8DE34A000EF9B8 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC313B61E8DE34A000EF9B8 /* Common.m */; };
 		2ACF301A1E8A032500CA5DE7 /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF30191E8A032500CA5DE7 /* LoginManager.m */; };
@@ -164,6 +165,8 @@
 		2AB3402A1E962CD000ED39A8 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		2AB3402C1E962D0D00ED39A8 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		2AB3402E1E962D1E00ED39A8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		2ABFD7B51E97925400EBCC4F /* QNTokenManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNTokenManager.h; sourceTree = "<group>"; };
+		2ABFD7B61E97925400EBCC4F /* QNTokenManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QNTokenManager.m; sourceTree = "<group>"; };
 		2AC313AE1E8DDF65000EF9B8 /* ContactSqlManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactSqlManager.h; sourceTree = "<group>"; };
 		2AC313AF1E8DDF65000EF9B8 /* ContactSqlManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactSqlManager.m; sourceTree = "<group>"; };
 		2AC313B51E8DE34A000EF9B8 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
@@ -328,8 +331,8 @@
 		2A9D50B31E88F3A800614B80 /* FourthItem */ = {
 			isa = PBXGroup;
 			children = (
+				2ABFD7B41E97923E00EBCC4F /* Manager */,
 				2A9D50CD1E88F65E00614B80 /* Controller */,
-				2A9D50CE1E88F65E00614B80 /* Manager */,
 			);
 			path = FourthItem;
 			sourceTree = "<group>";
@@ -469,13 +472,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		2A9D50CE1E88F65E00614B80 /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Manager;
-			sourceTree = "<group>";
-		};
 		2A9D50CF1E88F66600614B80 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -545,6 +541,15 @@
 				2A9D50E41E89077D00614B80 /* SuperTableViewCell.m */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		2ABFD7B41E97923E00EBCC4F /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				2ABFD7B51E97925400EBCC4F /* QNTokenManager.h */,
+				2ABFD7B61E97925400EBCC4F /* QNTokenManager.m */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		2AC313B41E8DE335000EF9B8 /* Common */ = {
@@ -807,6 +812,7 @@
 				2A5027451E8B4BE400679D52 /* ImageCell.m in Sources */,
 				2A5027871E8CE14500679D52 /* HPPForCollectionViewController.m in Sources */,
 				2ACF302B1E8A348700CA5DE7 /* LoginModel.m in Sources */,
+				2ABFD7B71E97925400EBCC4F /* QNTokenManager.m in Sources */,
 				2A2565451E948FF200ECDB5A /* SuperScrollViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

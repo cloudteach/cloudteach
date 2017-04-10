@@ -71,17 +71,37 @@
         if(aError) {
             [self showError:[NSString stringWithFormat:@"%@",aError]];
         }else{
-            [self showSuccess:@"注册成功"];
-            [self.navigationController popViewControllerAnimated:YES];
             
             //保存到数据库
-            AVObject *testObject = [AVObject objectWithClassName:@"cloudteach_user"];
-            [testObject setObject:aUsername forKey:@"ct_username"];
-            if([testObject save]) {
-                NSLog(@"保存到数据库成功");
-            }else{
-                NSLog(@"保存到数据库失败");
-            }
+            AVObject *user = [AVObject objectWithClassName:@"cloudteach_user"];
+            [user setObject:aUsername forKey:@"ct_username"];
+            
+            [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                if(succeeded) {
+                    NSLog(@"保存到数据库成功");
+                }else{
+                    NSLog(@"保存到数据库失败");
+                }
+            }];
+            
+            [self showSuccess:@"注册成功"];
+            [self.navigationController popViewControllerAnimated:YES];
+//            //注册leanCloud
+//            NSString *userName = [aUsername copy];
+//            NSString *password = [_tfPassWord.text copy];
+//            AVUser *user = [AVUser user];
+//            user.username = userName;
+//            user.password = password;
+//            [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//                if(succeeded && !error) {
+//                    [self showSuccess:@"注册成功"];
+//                    
+//                }else{
+//                    [self showError:@"注册失败"];
+//                    return;
+//                }
+//                [self.navigationController popViewControllerAnimated:YES];
+//            }];
         }
     }];
 }

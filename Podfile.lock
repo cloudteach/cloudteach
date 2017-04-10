@@ -34,11 +34,15 @@ PODS:
   - AVOSCloudIM/_NOARC (3.4.4):
     - AVOSCloud (= 3.4.4)
   - Bugly (2.4.2)
+  - HappyDNS (0.3.10)
   - HyphenateLite (3.1.5.1)
   - JSONModel (1.5.1)
   - mysql-connector-c (1.0.0)
   - OHMySQL (0.3.0):
     - mysql-connector-c (= 1.0.0)
+  - Qiniu (7.1.1):
+    - AFNetworking (~> 3)
+    - HappyDNS (~> 0.3)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
@@ -52,6 +56,7 @@ DEPENDENCIES:
   - HyphenateLite
   - JSONModel (~> 1.5.1)
   - OHMySQL (~> 0.3.0)
+  - Qiniu (~> 7.1)
   - SDWebImage (~> 3.8.2)
 
 SPEC CHECKSUMS:
@@ -60,12 +65,14 @@ SPEC CHECKSUMS:
   AVOSCloudCrashReporting: b1e94cb0929b1f7b688d8c7995b248583af2b58d
   AVOSCloudIM: ad650bf0635e95b12d1aec156131b71d320086d2
   Bugly: b09cd3c7e54048a0e079be88a7a99610f14eab8f
+  HappyDNS: 06a9fed2796663fd87626dbf02552933265bf059
   HyphenateLite: 7f4bbb7e38917dfbdcc5247fe15c6a0df0f38069
   JSONModel: fd2553dc9e6608a3f35bfc956a14be35395d3852
   mysql-connector-c: 6c1e5a80cf2f459f31578ad1cee95bd36c9363a2
   OHMySQL: b227ffdafaaf1c55e90a31720d502c4387338ffd
+  Qiniu: 5e5d7d759d22393bb4b87cdfacf8fab951260f3e
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
 
-PODFILE CHECKSUM: 19f28fe4c61aacc8d375ea36cb8f66eeed7c192b
+PODFILE CHECKSUM: d1331b2d463d9ccff27a3bdb8943659783ac74c8
 
 COCOAPODS: 1.2.0

@@ -17,6 +17,7 @@
 #define BASE_COLOR          HEX_RGBA(0x32a0d9, 1)
 #define HAD_LOGINED         
 #define LOGIN_STATE         @"login_state"
+#define QiNiu_URL           @"http://onmv3v70a.bkt.clouddn.com"
 
 //system
 #import <objc/runtime.h>
@@ -29,6 +30,7 @@
 #import <HyphenateLite/EMSDK.h>
 #import "NSDate+Category.h"
 #import <AVOSCloud/AVOSCloud.h>
+#import <QiniuSDK.h>
 
 //model
 #import "LoginModel.h"

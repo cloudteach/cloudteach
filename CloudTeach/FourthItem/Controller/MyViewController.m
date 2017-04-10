@@ -11,6 +11,7 @@
 #import "HPPForTableViewController.h"
 #import "HPPForCollectionViewController.h"
 #import "HPPNavigationController.h"
+#import "QNTokenManager.h"
 
 @interface MyViewController ()
 @property (nonatomic,strong)UIImageView *imgvHead;
@@ -22,9 +23,22 @@
     [super viewDidLoad];
     
     [self initUI];
+    [self getuserHead];
     
     [[NSNotificationCenter defaultCenter] removeObserver:@"didHeadChoosed"];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didHeadChoosed:) name:@"didHeadChoosed" object:nil];
+}
+
+- (void)getuserHead {
+    //查询ObjectId
+    AVQuery *query = [AVQuery queryWithClassName:@"cloudteach_user"];
+    [query whereKey:@"ct_username" equalTo:[EMClient sharedClient].currentUsername];
+    [query getFirstObjectInBackgroundWithBlock:^(AVObject *object, NSError *error) {
+        if(object) {
+            NSString *url = object[@"ct_head"];
+            [self.imgvHead sd_setImageWithURL:[NSURL URLWithString:url]];
+        }
+    }];
 }
 
 - (void)initUI {
@@ -161,7 +175,36 @@
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         self.imgvHead.image = image;
+        [self uploadFile];
     });
+}
+
+- (void)uploadFile {
+    NSString *token = [QNTokenManager token];
+    NSData *data = UIImagePNGRepresentation(self.imgvHead.image);
+    QNUploadManager *manager = [QNUploadManager new];
+    [manager putData:data key:nil token:token complete:^(QNResponseInfo *info, NSString *key, NSDictionary *resp) {
+        NSString *url = [NSString stringWithFormat:@"%@/%@",QiNiu_URL,resp[@"key"]];
+        NSLog(@"url----:%@",url);
+        
+        //查询ObjectId
+        AVQuery *query = [AVQuery queryWithClassName:@"cloudteach_user"];
+        [query whereKey:@"ct_username" equalTo:[EMClient sharedClient].currentUsername];
+        [query getFirstObjectInBackgroundWithBlock:^(AVObject *object, NSError *error) {
+            if(object) {
+                NSString *objectId = object.objectId;
+                
+//                NSString *sql = @"update cloudteach_user set ct_head='http://onmv3v70a.bkt.clouddn.com/FtG-GvBc_rJnmVK6qfpNUlT871oz' where objectId='58eae48561ff4b006b568429'";
+                
+                NSString *sql = [NSString stringWithFormat:@"update cloudteach_user set ct_head='%@' where objectId='%@'",url,objectId];
+                
+                [AVQuery doCloudQueryInBackgroundWithCQL:sql callback:^(AVCloudQueryResult *result, NSError *error) {
+                    NSLog(@"");
+                }];
+            }
+        }];
+        
+    } option:nil];
 }
 
 - (void)initRootViewController {
